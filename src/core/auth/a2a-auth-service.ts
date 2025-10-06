@@ -13,13 +13,12 @@ import {
   A2AAuthResponse,
   A2ASecurityContext,
   AuthCredentials,
-  AuthenticationResult,
-  RefreshTokenResult,
-  ValidationResult,
-  AuthError,
   AuthProviderType,
 } from "../../types/auth.js";
-import { A2AMessage, A2AResponse, A2AError, AgentId } from "../../types/a2a.js";
+import { A2AMessage, A2AResponse, AgentId } from "../../types/a2a.js";
+import { SignedA2AMessage } from "../../types/signature.js";
+import { SignatureService } from "../../protocols/a2a/security/signature-service.js";
+import { AgentKeyRegistry } from "../../protocols/a2a/security/agent-key-registry.js";
 
 /**
  * A2A Auth Service Configuration
@@ -78,9 +77,14 @@ export class A2AAuthService extends EventEmitter {
     { count: number; lastAttempt: number }
   >();
 
+  // Signature validation
+  private signatureService: SignatureService;
+  private keyRegistry: AgentKeyRegistry;
+
   constructor(
     authManager: UnifiedAuthManager,
     config: Partial<A2AAuthServiceConfig> = {},
+    keyRegistry?: AgentKeyRegistry,
   ) {
     super();
 
@@ -96,6 +100,10 @@ export class A2AAuthService extends EventEmitter {
     };
 
     this.logger = new Logger("A2AAuthService");
+
+    // Initialize signature validation services
+    this.keyRegistry = keyRegistry || new AgentKeyRegistry();
+    this.signatureService = new SignatureService(this.keyRegistry);
 
     // Set up cleanup intervals
     this.startCleanupTasks();
@@ -220,7 +228,7 @@ export class A2AAuthService extends EventEmitter {
     message: A2AAuthMessage,
     context: AuthRequestContext,
   ): Promise<A2AAuthResponse> {
-    const { provider, credentials, context: authContext } = message.params;
+    const { provider, context: authContext } = message.params;
 
     if (!provider) {
       throw this.createAuthError(
@@ -278,7 +286,7 @@ export class A2AAuthService extends EventEmitter {
    */
   private async handleRefresh(
     message: A2AAuthMessage,
-    context: AuthRequestContext,
+    _context: AuthRequestContext,
   ): Promise<A2AAuthResponse> {
     const { credentials } = message.params;
 
@@ -327,7 +335,7 @@ export class A2AAuthService extends EventEmitter {
    */
   private async handleValidate(
     message: A2AAuthMessage,
-    context: AuthRequestContext,
+    _context: AuthRequestContext,
   ): Promise<A2AAuthResponse> {
     const { credentials } = message.params;
 
@@ -383,7 +391,7 @@ export class A2AAuthService extends EventEmitter {
    */
   private async handleRevoke(
     message: A2AAuthMessage,
-    context: AuthRequestContext,
+    _context: AuthRequestContext,
   ): Promise<A2AAuthResponse> {
     const { credentials } = message.params;
 
@@ -548,12 +556,58 @@ export class A2AAuthService extends EventEmitter {
   }
 
   /**
-   * Validate message signature (mock implementation)
+   * Validate message signature using cryptographic verification
    */
   private async validateSignature(message: A2AMessage): Promise<boolean> {
-    // In real implementation, this would verify the cryptographic signature
-    // using the agent's public key
-    return message.signature !== "invalid-signature";
+    // Check if message is signed
+    if (!this.isSignedMessage(message)) {
+      // If signature is required but not present, reject
+      if (this.config.requireSignature) {
+        this.logger.warn("Message missing signature", {
+          from: message.from,
+          method: message.method,
+        });
+        return false;
+      }
+      // If signatures are optional, allow unsigned messages
+      return true;
+    }
+
+    // Verify the signature
+    const result = await this.signatureService.verifySignature(
+      message as unknown as SignedA2AMessage,
+    );
+
+    if (!result.valid) {
+      this.logger.error("Signature verification failed", {
+        from: message.from,
+        method: message.method,
+        error: result.error,
+      });
+    }
+
+    return result.valid;
+  }
+
+  /**
+   * Check if message is signed
+   */
+  private isSignedMessage(message: A2AMessage): boolean {
+    return this.signatureService.isSignedMessage(message);
+  }
+
+  /**
+   * Get the key registry for agent key management
+   */
+  getKeyRegistry(): AgentKeyRegistry {
+    return this.keyRegistry;
+  }
+
+  /**
+   * Get the signature service for message signing
+   */
+  getSignatureService(): SignatureService {
+    return this.signatureService;
   }
 
   /**

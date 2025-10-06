@@ -1,0 +1,177 @@
+{
+    "links": [
+      {
+        "url": "https://modelcontextprotocol.io/docs/develop/connect-local-servers",
+        "title": "Connect to local MCP servers - Model Context Protocol",
+        "description": "Learn how to extend Claude Desktop with local MCP servers to enable file system access and other powerful integrations"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+        "title": "What is the Model Context Protocol (MCP)? - Model Context..."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/tools/inspector",
+        "title": "Page Not Found"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+        "title": "Understanding MCP servers - Model Context Protocol"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+        "title": "Build an MCP server - Model Context Protocol",
+        "description": "Get started building your own server to use in Claude for Desktop and other clients."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/first-server/python",
+        "title": "Page Not Found"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/configuration",
+        "title": "Page Not Found"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/develop/connect-remote-servers",
+        "title": "Connect to remote MCP Servers - Model Context Protocol",
+        "description": "Learn how to connect Claude to remote MCP servers and extend its capabilities with internet-hosted tools and data sources"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+        "title": "Architecture overview - Model Context Protocol"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/develop/build-client",
+        "title": "Build an MCP client - Model Context Protocol",
+        "description": "Get started building your own client that can integrate with all MCP servers."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/learn/client-concepts",
+        "title": "Understanding MCP clients - Model Context Protocol"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/sdk",
+        "title": "SDKs - Model Context Protocol",
+        "description": "Official SDKs for building with Model Context Protocol"
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/tools/debugging",
+        "title": "Debugging",
+        "description": "A comprehensive guide to debugging Model Context Protocol (MCP) integrations."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/sampling",
+        "title": "Sampling",
+        "description": "MCP sampling allows servers to request LLM sampling from clients, enabling text, audio, or image interactions, and human review of requests."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/resources",
+        "title": "Resources",
+        "description": "The Model Context Protocol (MCP) allows servers to expose resources like files or database schemas to clients, which provide context to language models."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/architecture",
+        "title": "Architecture overview",
+        "description": "MCP uses a client-server architecture with a host, clients, and servers. It has two layers: a data layer for communication and a transport layer for data ..."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/roots",
+        "title": "Roots",
+        "description": "Roots in MCP define where servers can operate within a filesystem, using a file:// URI, and are exposed through user interfaces."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/transports",
+        "title": "Transports",
+        "description": "MCP uses two standard transports: stdio (standard in/out) and Streamable HTTP (using HTTP POST/GET and optional SSE). Custom transports are also possible."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/tools",
+        "title": "Tools",
+        "description": "MCP tools allow servers to expose tools for language models to interact with external systems, enabling model-controlled invocations."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/elicitation",
+        "title": "Elicitation",
+        "description": "Elicitation in MCP allows servers to implement interactive workflows by enabling user input requests to occur nested inside other MCP server features."
+      },
+      {
+        "url": "https://modelcontextprotocol.io/docs/concepts/prompts",
+        "title": "Prompts",
+        "description": "Prompts are structured messages and instructions for language models, exposed by servers to clients, and are user-controlled. They include a name, title, ..."
+      }
+    ],
+    "id": "Aghj_tmsY3ZTt6dl-pYCT",
+    "startedAt": "2025-10-06T20:28:11.108Z",
+    "endedAt": "2025-10-06T20:28:13.242Z",
+    "endpoint": "map",
+    "formState": {
+      "extractSetupCompleted": false,
+      "urls": [],
+      "extractSchema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "company_mission": {
+            "type": "string"
+          },
+          "supports_sso": {
+            "type": "boolean"
+          },
+          "is_open_source": {
+            "type": "boolean"
+          },
+          "is_in_yc": {
+            "type": "boolean"
+          }
+        }
+      },
+      "extractPrompt": "Extract the company details, following the schema.",
+      "enableWebSearch": false,
+      "options": {
+        "onlyMainContent": false,
+        "parsePDF": true,
+        "stealthMode": false,
+        "excludeTags": [],
+        "includeTags": [],
+        "waitFor": "",
+        "timeout": "",
+        "maxAge": "2 days",
+        "ignoreSitemap": false,
+        "crawlEntireDomain": false,
+        "sitemap": "include",
+        "limit": "5000",
+        "maxDepth": "",
+        "excludePaths": [],
+        "includePaths": [],
+        "includeSubdomains": false,
+        "search": "",
+        "scrapeContentFromSearchResults": true,
+        "timeBasedSearch": "",
+        "location": "",
+        "prompt": ""
+      },
+      "formats": [
+        "markdown"
+      ],
+      "sources": [
+        "web"
+      ],
+      "categories": [],
+      "jsonSchema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "company_name": {
+            "type": "string"
+          },
+          "company_description": {
+            "type": "string"
+          }
+        }
+      },
+      "agent": {},
+      "url": "modelcontextprotocol.io/docs/",
+      "endpoint": "map"
+    },
+    "status": "success",
+    "version": "fXzEuCocp7NctzRW-P34C"
+  }

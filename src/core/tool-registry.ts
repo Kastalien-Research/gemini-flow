@@ -1,6 +1,6 @@
-import { ToolCapability } from '../../types/mcp-config.js';
+import { ToolCapability } from '../types/mcp-config.js';
 import { SQLiteMemoryCore } from './sqlite-memory-core.js';
-import { Logger } from '../../utils/logger.js';
+import { Logger } from '../utils/logger.js';
 
 /**
  * @interface RegisteredToolMetadata
@@ -74,12 +74,12 @@ export class ToolRegistry {
     if (existingTool) {
       await this.dbCore.runQuery(
         `UPDATE tools SET category = ?, capabilities = ?, version = ?, description = ?, accessControl = ?, usageCount = ?, lastUsed = ?, avgExecutionTime = ?, errorRate = ? WHERE id = ?`,
-        metadata.category, JSON.stringify(metadata.capabilities), metadata.version, metadata.description, metadata.accessControl, metadata.usageCount, metadata.lastUsed, metadata.avgExecutionTime, metadata.errorRate, metadata.name
+        [metadata.category, JSON.stringify(metadata.capabilities), metadata.version, metadata.description, metadata.accessControl, metadata.usageCount, metadata.lastUsed, metadata.avgExecutionTime, metadata.errorRate, metadata.name]
       );
     } else {
       await this.dbCore.runQuery(
         `INSERT INTO tools (id, name, category, capabilities, version, description, accessControl, usageCount, lastUsed, avgExecutionTime, errorRate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        metadata.name, metadata.name, metadata.category, JSON.stringify(metadata.capabilities), metadata.version, metadata.description, metadata.accessControl, metadata.usageCount, metadata.lastUsed, metadata.avgExecutionTime, metadata.errorRate
+        [metadata.name, metadata.name, metadata.category, JSON.stringify(metadata.capabilities), metadata.version, metadata.description, metadata.accessControl, metadata.usageCount, metadata.lastUsed, metadata.avgExecutionTime, metadata.errorRate]
       );
     }
   }
@@ -120,7 +120,7 @@ export class ToolRegistry {
       // Persist updated metrics to database
       await this.dbCore.runQuery(
         `UPDATE tools SET usageCount = ?, lastUsed = ?, avgExecutionTime = ?, errorRate = ? WHERE id = ?`,
-        metadata.usageCount, metadata.lastUsed, metadata.avgExecutionTime, metadata.errorRate, metadata.name
+        [metadata.usageCount, metadata.lastUsed, metadata.avgExecutionTime, metadata.errorRate, metadata.name]
       );
     }
   }

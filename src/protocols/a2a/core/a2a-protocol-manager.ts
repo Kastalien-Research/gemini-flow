@@ -15,13 +15,13 @@ import {
   A2AProtocolConfig,
   AgentCard,
   AgentId,
-  JsonRpcRequest,
-  JsonRpcResponse,
-  JsonRpcError,
   MessagePriority,
   RetryPolicy,
 } from "../../../types/a2a.js";
+import { SignedA2AMessage } from "../../../types/signature.js";
 import { Logger } from "../../../utils/logger.js";
+import { SignatureService } from "../security/signature-service.js";
+import { AgentKeyRegistry } from "../security/agent-key-registry.js";
 
 /**
  * Message handler function type
@@ -93,6 +93,8 @@ export class A2AProtocolManager extends EventEmitter {
   // Security and validation
   private trustedAgents: Set<AgentId>;
   private messageValidationEnabled: boolean;
+  private signatureService: SignatureService;
+  private keyRegistry: AgentKeyRegistry;
 
   constructor(config: A2AProtocolConfig) {
     super();
@@ -100,6 +102,10 @@ export class A2AProtocolManager extends EventEmitter {
     this.logger = new Logger("A2AProtocolManager");
     this.trustedAgents = new Set(config.trustedAgents || []);
     this.messageValidationEnabled = config.securityEnabled ?? true;
+
+    // Initialize signature validation services
+    this.keyRegistry = new AgentKeyRegistry();
+    this.signatureService = new SignatureService(this.keyRegistry);
 
     // Set up error handling
     this.on("error", (error) => {
@@ -463,12 +469,58 @@ export class A2AProtocolManager extends EventEmitter {
   }
 
   /**
-   * Validate message signature (mock implementation)
+   * Validate message signature using cryptographic verification
    */
   private async validateSignature(message: A2AMessage): Promise<boolean> {
-    // In a real implementation, this would verify the cryptographic signature
-    // using the agent's public key
-    return message.signature !== "invalid-signature";
+    // Check if message is signed
+    if (!this.isSignedMessage(message)) {
+      // If signature is required but not present, reject
+      if (this.config.securityEnabled) {
+        this.logger.warn("Message missing signature", {
+          from: message.from,
+          method: message.method,
+        });
+        return false;
+      }
+      // If signatures are optional, allow unsigned messages
+      return true;
+    }
+
+    // Verify the signature - cast through unknown to handle type incompatibility
+    const result = await this.signatureService.verifySignature(
+      message as unknown as SignedA2AMessage,
+    );
+
+    if (!result.valid) {
+      this.logger.error("Signature verification failed", {
+        from: message.from,
+        method: message.method,
+        error: result.error,
+      });
+    }
+
+    return result.valid;
+  }
+
+  /**
+   * Check if message is signed
+   */
+  private isSignedMessage(message: A2AMessage): boolean {
+    return this.signatureService.isSignedMessage(message);
+  }
+
+  /**
+   * Get the key registry for agent key management
+   */
+  getKeyRegistry(): AgentKeyRegistry {
+    return this.keyRegistry;
+  }
+
+  /**
+   * Get the signature service for message signing
+   */
+  getSignatureService(): SignatureService {
+    return this.signatureService;
   }
 
   /**
@@ -829,7 +881,7 @@ export class A2AProtocolManager extends EventEmitter {
    */
   private registerDefaultHandlers(): void {
     // System ping handler
-    this.messageHandlers.set("system.ping", async (message: A2AMessage) => {
+    this.messageHandlers.set("system.ping", async (_message: A2AMessage) => {
       return {
         pong: true,
         timestamp: Date.now(),
@@ -838,7 +890,7 @@ export class A2AProtocolManager extends EventEmitter {
     });
 
     // Agent info handler
-    this.messageHandlers.set("agent.info", async (message: A2AMessage) => {
+    this.messageHandlers.set("agent.info", async (_message: A2AMessage) => {
       return {
         agentCard: this.config.agentCard,
         uptime: Date.now() - this.metrics.startTime,

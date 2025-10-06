@@ -1,5 +1,5 @@
 import { ToolDiscoveryEngine, DiscoveredTool } from './tool-discovery.js';
-import { Logger } from '../../utils/logger.js';
+import { Logger } from '../utils/logger.js';
 
 /**
  * @class ToolExecutor

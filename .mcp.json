@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "gemini-flow": {
+    "claude-flow@alpha": {
       "command": "npx",
       "args": [
-        "gemini-flow@latest",
+        "claude-flow@alpha",
         "mcp",
         "start"
       ],
@@ -18,41 +18,22 @@
       ],
       "type": "stdio"
     },
-    "Redis": {
+    "flow-nexus": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-redis", "redis://localhost:6379"]
+      "args": [
+        "flow-nexus@latest",
+        "mcp",
+        "start"
+      ],
+      "type": "stdio"
     },
-    "Git Tools": {
-      "command": "python3",
-      "args": ["-m", "mcp_server_git"]
-    },
-    "Puppeteer": {
+    "agentic-payments": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
-    },
-    "Sequential Thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "Filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/chrisdukes/Desktop"]
-    },
-    "GitHub": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"]
-    },
-    "Mem0": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    },
-    "Supabase": {
-      "command": "npx",
-      "args": ["-y", "@supabase/mcp-server-supabase@latest"]
-    },
-    "mcp-omnisearch": {
-      "command": "npx",
-      "args": ["-y", "mcp-omnisearch"]
+      "args": [
+        "agentic-payments@latest",
+        "mcp"
+      ],
+      "type": "stdio"
     }
   }
 }
