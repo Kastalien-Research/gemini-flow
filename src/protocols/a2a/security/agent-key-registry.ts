@@ -5,7 +5,7 @@
  * Handles secret registration, rotation, and revocation
  */
 
-import { createHash, randomBytes } from "crypto";
+import { createHmac, randomBytes } from "crypto";
 import { AgentId } from "../../../types/a2a.js";
 import {
   KeyMetadata,
@@ -192,7 +192,10 @@ export class AgentKeyRegistry implements IAgentKeyRegistry {
    * Generate a unique key ID from secret
    */
   private generateKeyId(secret: string): string {
-    return createHash("sha256").update(secret).digest("hex").slice(0, 16);
+    return createHmac("sha256", "keyid-salt")
+      .update(secret)
+      .digest("hex")
+      .slice(0, 16);
   }
 
   /**
