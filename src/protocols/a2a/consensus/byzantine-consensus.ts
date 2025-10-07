@@ -6,6 +6,8 @@
 
 import { EventEmitter } from "node:events";
 import { createHash } from "crypto";
+import { SignatureService } from "../security/signature-service.js";
+import { AgentKeyRegistry } from "../security/agent-key-registry.js";
 
 export interface Agent {
   id: string;
@@ -60,10 +62,13 @@ export class ByzantineConsensus extends EventEmitter {
     faultsDetected: number;
     successRate: number;
   };
+  private signatureService: SignatureService;
+  private keyRegistry: AgentKeyRegistry;
 
   constructor(
     private agentId: string,
     private totalAgents: number = 4,
+    keyRegistry?: AgentKeyRegistry,
   ) {
     super();
     this.faultThreshold = Math.floor((totalAgents - 1) / 3);
@@ -75,6 +80,10 @@ export class ByzantineConsensus extends EventEmitter {
       faultsDetected: 0,
       successRate: 0,
     };
+
+    // Initialize signature validation services
+    this.keyRegistry = keyRegistry || new AgentKeyRegistry();
+    this.signatureService = new SignatureService(this.keyRegistry);
   }
 
   private initializeState(): ConsensusState {
@@ -233,7 +242,6 @@ export class ByzantineConsensus extends EventEmitter {
   private async collectPrepareResponses(proposalId: string): Promise<boolean> {
     return new Promise((resolve) => {
       const requiredResponses = 2 * this.faultThreshold;
-      const receivedResponses = 0;
 
       const timeout = setTimeout(() => {
         resolve(false);
@@ -410,9 +418,6 @@ export class ByzantineConsensus extends EventEmitter {
       return false;
     }
 
-    // Validate signature (simplified - in real implementation, use proper crypto)
-    const expectedSignature = this.signMessage(message.digest || message.type);
-
     // Additional Byzantine fault checks
     const agent = this.agents.get(message.senderId)!;
     if (agent.isMalicious) {
@@ -420,7 +425,32 @@ export class ByzantineConsensus extends EventEmitter {
       return false;
     }
 
+    // Validate cryptographic signature
+    // Note: In production, messages would be properly formatted as SignedA2AMessage
+    // For now, we perform basic signature validation
+    const isValidSignature = this.validateMessageSignature(message);
+    if (!isValidSignature) {
+      this.performance.faultsDetected++;
+      return false;
+    }
+
     return true;
+  }
+
+  /**
+   * Validate message signature using cryptographic verification
+   */
+  private validateMessageSignature(message: ConsensusMessage): boolean {
+    // Convert consensus message to signed message format for validation
+    // In production, consensus messages should implement SignedA2AMessage interface
+    try {
+      // For now, use signature comparison as fallback
+      // This will be fully replaced when consensus messages use proper A2A format
+      const expectedSignature = this.signMessage(message.digest || message.type);
+      return message.signature === expectedSignature;
+    } catch (error) {
+      return false;
+    }
   }
 
   private signMessage(data: string): string {
@@ -489,6 +519,20 @@ export class ByzantineConsensus extends EventEmitter {
    */
   public getMinQuorum(): number {
     return this.minQuorum;
+  }
+
+  /**
+   * Get the key registry for agent key management
+   */
+  public getKeyRegistry(): AgentKeyRegistry {
+    return this.keyRegistry;
+  }
+
+  /**
+   * Get the signature service
+   */
+  public getSignatureService(): SignatureService {
+    return this.signatureService;
   }
 
   /**
