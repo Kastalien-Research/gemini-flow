@@ -1,46 +1,39 @@
 /**
  * Test Key Generation Utilities
  * 
- * Provides utilities for generating test key pairs and managing test keys
+ * Provides utilities for generating shared secrets for HMAC testing
  */
 
-import * as ed25519Module from "@noble/ed25519";
-import { sha512 } from "@noble/hashes/sha2.js";
-
-// Configure ed25519 IMMEDIATELY with SHA-512
-const ed25519 = ed25519Module;
-(ed25519.etc as any).sha512Sync = (...m: Uint8Array[]) =>
-  sha512(ed25519.etc.concatBytes(...m));
+import { randomBytes } from "crypto";
 
 /**
- * Test key pair
+ * Test secret pair (simplified from keypair)
  */
 export interface TestKeyPair {
-  privateKey: Uint8Array;
-  publicKey: Uint8Array;
-  publicKeyBase64: string;
+  privateKey: string; // Shared secret (changed from Uint8Array)
+  publicKey: string; // Same as privateKey for HMAC (backward compat)
+  publicKeyBase64: string; // Same as privateKey for backward compat
   agentId: string;
 }
 
 /**
- * Generate a test key pair for an agent
+ * Generate a test shared secret for an agent
  */
 export async function generateTestKeyPair(
   agentId: string,
 ): Promise<TestKeyPair> {
-  const privateKey = ed25519.utils.randomSecretKey();
-  const publicKey = await ed25519.getPublicKey(privateKey);
+  const secret = randomBytes(32).toString("base64");
 
   return {
-    privateKey,
-    publicKey,
-    publicKeyBase64: Buffer.from(publicKey).toString("base64"),
+    privateKey: secret,
+    publicKey: secret, // For HMAC, public and private are the same
+    publicKeyBase64: secret,
     agentId,
   };
 }
 
 /**
- * Generate multiple test key pairs
+ * Generate multiple test shared secrets
  */
 export async function generateMultipleKeyPairs(
   count: number,
@@ -58,21 +51,21 @@ export async function generateMultipleKeyPairs(
 }
 
 /**
- * Create a deterministic test key pair for reproducible tests
+ * Create a deterministic test secret for reproducible tests
  * WARNING: Only use for testing!
  */
 export async function createDeterministicKeyPair(
   seed: string,
 ): Promise<TestKeyPair> {
-  // Create deterministic private key from seed (INSECURE - test only!)
-  const seedBuffer = Buffer.from(seed.padEnd(32, "0").slice(0, 32));
-  const privateKey = new Uint8Array(seedBuffer);
-  const publicKey = await ed25519.getPublicKey(privateKey);
+  // Create deterministic secret from seed (INSECURE - test only!)
+  const secret = Buffer.from(seed.padEnd(32, "0").slice(0, 32)).toString(
+    "base64",
+  );
 
   return {
-    privateKey,
-    publicKey,
-    publicKeyBase64: Buffer.from(publicKey).toString("base64"),
+    privateKey: secret,
+    publicKey: secret,
+    publicKeyBase64: secret,
     agentId: `test-${seed}`,
   };
 }

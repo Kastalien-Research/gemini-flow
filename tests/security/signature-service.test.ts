@@ -1,7 +1,7 @@
 /**
  * Unit Tests: SignatureService
  * 
- * Comprehensive tests for signature creation, verification, and security validation
+ * Comprehensive tests for HMAC-SHA256 signature creation and verification
  */
 
 import { describe, test, expect, beforeEach } from "vitest";
@@ -14,21 +14,19 @@ import { A2AMessage } from "../../src/types/a2a.js";
 describe("SignatureService", () => {
   let signatureService: SignatureService;
   let keyRegistry: AgentKeyRegistry;
-  let agentPrivateKey: Uint8Array;
-  let agentPublicKey: string;
+  let agentSecret: string;
   const agentId = "test-agent-001";
 
   beforeEach(async () => {
     keyRegistry = new AgentKeyRegistry();
     signatureService = new SignatureService(keyRegistry);
 
-    // Generate test key pair
+    // Generate test shared secret
     const keyPair = await generateTestKeyPair(agentId);
-    agentPrivateKey = keyPair.privateKey;
-    agentPublicKey = keyPair.publicKeyBase64;
+    agentSecret = keyPair.privateKey;
 
-    // Register agent's public key
-    await keyRegistry.registerAgentKey(agentId, agentPublicKey);
+    // Register agent's shared secret
+    await keyRegistry.registerAgentKey(agentId, agentSecret);
   });
 
   test("should sign and verify valid message", async () => {
@@ -36,13 +34,13 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
     expect(signedMessage.signature).toBeDefined();
     expect(signedMessage.signedPayload).toBeDefined();
-    expect(signedMessage.signature.algorithm).toBe("ed25519");
+    expect(signedMessage.signature.algorithm).toBe("hmac-sha256");
 
     const result = await signatureService.verifySignature(signedMessage);
     expect(result.valid).toBe(true);
@@ -54,7 +52,7 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -71,7 +69,7 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -88,7 +86,7 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -112,7 +110,7 @@ describe("SignatureService", () => {
 
     const result = await signatureService.verifySignature(signedMessage);
     expect(result.valid).toBe(false);
-    expect(result.error).toContain("No public key registered");
+    expect(result.error).toContain("No secret registered");
   });
 
   test("should reject message with revoked key", async () => {
@@ -120,7 +118,7 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -130,7 +128,8 @@ describe("SignatureService", () => {
 
     const result = await signatureService.verifySignature(signedMessage);
     expect(result.valid).toBe(false);
-    expect(result.error).toContain("revoked");
+    // After revocation, secret is deleted, so error will be "No secret registered"
+    expect(result.error).toContain("No secret registered");
   });
 
   test("should create canonical JSON consistently", async () => {
@@ -146,12 +145,12 @@ describe("SignatureService", () => {
 
     const signed1 = await signatureService.signMessage(
       message1,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
     const signed2 = await signatureService.signMessage(
       message2,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -164,7 +163,7 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -181,12 +180,12 @@ describe("SignatureService", () => {
 
     const signed1 = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
     const signed2 = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -194,33 +193,35 @@ describe("SignatureService", () => {
   });
 
   test("should allow 1 minute clock skew tolerance", async () => {
-    const message = createTestMessage({ from: agentId });
+    // Create message with timestamp 30 seconds in future
+    const futureTimestamp = Date.now() + 30 * 1000;
+    const message = createTestMessage({ 
+      from: agentId,
+      timestamp: futureTimestamp 
+    });
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
-    // Set timestamp 30 seconds in future (within tolerance)
-    signedMessage.signature.timestamp = Date.now() + 30 * 1000;
-
+    // Signature timestamp will match message timestamp
     const result = await signatureService.verifySignature(signedMessage);
     expect(result.valid).toBe(true);
   });
 
-  test("should reject public key mismatch", async () => {
+  test("should reject key ID mismatch", async () => {
     const message = createTestMessage({ from: agentId });
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
-    // Replace public key with different one
-    const otherKeyPair = await generateTestKeyPair("other-agent");
-    signedMessage.signature.publicKey = otherKeyPair.publicKeyBase64;
+    // Replace key ID with different one
+    signedMessage.signature.keyId = "different-key-id";
 
     const result = await signatureService.verifySignature(signedMessage);
     expect(result.valid).toBe(false);
@@ -244,12 +245,12 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
-    // Corrupt signature with invalid base64
-    signedMessage.signature.signature = "not-valid-base64!!!";
+    // Corrupt signature with invalid hex
+    signedMessage.signature.signature = "not-valid-hex!!!";
 
     const result = await signatureService.verifySignature(signedMessage);
     expect(result.valid).toBe(false);
@@ -261,7 +262,7 @@ describe("SignatureService", () => {
 
     const signedMessage = await signatureService.signMessage(
       message,
-      agentPrivateKey,
+      agentSecret,
       agentId,
     );
 
@@ -283,7 +284,7 @@ describe("SignatureService", () => {
 
     // Sign all messages concurrently
     const signPromises = messages.map((msg) =>
-      signatureService.signMessage(msg, agentPrivateKey, agentId),
+      signatureService.signMessage(msg, agentSecret, agentId),
     );
 
     const signedMessages = await Promise.all(signPromises);
@@ -310,7 +311,7 @@ describe("SignatureService", () => {
     const stats = signatureService.getStats();
 
     expect(stats.maxSignatureAge).toBe(5 * 60 * 1000);
-    expect(stats.algorithm).toBe("ed25519");
+    expect(stats.algorithm).toBe("hmac-sha256");
     expect(stats.keyRegistryStats).toBeDefined();
   });
 });

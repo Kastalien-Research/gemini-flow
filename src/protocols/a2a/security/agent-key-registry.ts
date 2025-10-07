@@ -1,11 +1,11 @@
 /**
  * Agent Key Registry
  * 
- * Manages agent public keys for signature verification
- * Handles key registration, rotation, and revocation
+ * Manages agent shared secrets for HMAC signature verification
+ * Handles secret registration, rotation, and revocation
  */
 
-import { createHash } from "crypto";
+import { createHash, randomBytes } from "crypto";
 import { AgentId } from "../../../types/a2a.js";
 import {
   KeyMetadata,
@@ -16,29 +16,29 @@ import {
 import { Logger } from "../../../utils/logger.js";
 
 /**
- * Agent Key Registry Implementation
+ * Agent Key Registry Implementation (HMAC-based)
  */
 export class AgentKeyRegistry implements IAgentKeyRegistry {
-  private keys: Map<AgentId, string> = new Map(); // agentId -> publicKey
+  private secrets: Map<AgentId, string> = new Map(); // agentId -> shared secret
   private metadata: Map<AgentId, KeyMetadata> = new Map(); // agentId -> metadata
   private revokedKeys: Map<AgentId, RevokedKey[]> = new Map(); // agentId -> revoked keys
   private logger: Logger;
 
   constructor() {
     this.logger = new Logger("AgentKeyRegistry");
-    this.logger.info("Agent Key Registry initialized");
+    this.logger.info("Agent Key Registry initialized (HMAC mode)");
   }
 
   /**
-   * Register an agent's public key
+   * Register an agent's shared secret
    */
   async registerAgentKey(
     agentId: AgentId,
-    publicKey: string,
+    secret: string,
     metadata: Partial<KeyMetadata> = {},
   ): Promise<void> {
-    // Generate key ID from public key
-    const keyId = this.generateKeyId(publicKey);
+    // Generate key ID from secret
+    const keyId = this.generateKeyId(secret);
 
     // Check if key is already revoked
     const revoked = this.revokedKeys.get(agentId) || [];
@@ -46,23 +46,31 @@ export class AgentKeyRegistry implements IAgentKeyRegistry {
       throw new Error("Cannot register revoked key");
     }
 
-    // Store key and metadata
-    this.keys.set(agentId, publicKey);
+    // Store secret and metadata
+    this.secrets.set(agentId, secret);
     this.metadata.set(agentId, {
       registeredAt: Date.now(),
       keyId,
-      algorithm: "ed25519" as SignatureAlgorithm,
+      algorithm: "hmac-sha256" as SignatureAlgorithm,
       ...metadata,
     });
 
-    this.logger.info(`Registered key for agent ${agentId}`, { keyId });
+    this.logger.info(`Registered secret for agent ${agentId}`, { keyId });
   }
 
   /**
-   * Retrieve an agent's public key
+   * Retrieve an agent's shared secret
+   */
+  async getAgentSecret(agentId: AgentId): Promise<string | null> {
+    return this.secrets.get(agentId) || null;
+  }
+
+  /**
+   * Backward compatibility: alias for getAgentSecret
+   * @deprecated Use getAgentSecret instead
    */
   async getAgentPublicKey(agentId: AgentId): Promise<string | null> {
-    return this.keys.get(agentId) || null;
+    return this.getAgentSecret(agentId);
   }
 
   /**
@@ -73,19 +81,19 @@ export class AgentKeyRegistry implements IAgentKeyRegistry {
   }
 
   /**
-   * Revoke a compromised key
+   * Revoke a compromised secret
    */
   async revokeKey(
     agentId: AgentId,
     keyId: string,
     reason: string,
   ): Promise<void> {
-    const currentKey = this.keys.get(agentId);
-    if (!currentKey) {
-      throw new Error(`No key registered for agent ${agentId}`);
+    const currentSecret = this.secrets.get(agentId);
+    if (!currentSecret) {
+      throw new Error(`No secret registered for agent ${agentId}`);
     }
 
-    const currentKeyId = this.generateKeyId(currentKey);
+    const currentKeyId = this.generateKeyId(currentSecret);
     if (currentKeyId !== keyId) {
       throw new Error("Key ID mismatch");
     }
@@ -99,38 +107,36 @@ export class AgentKeyRegistry implements IAgentKeyRegistry {
     });
     this.revokedKeys.set(agentId, revoked);
 
-    // Remove from active keys
-    this.keys.delete(agentId);
+    // Remove from active secrets
+    this.secrets.delete(agentId);
     this.metadata.delete(agentId);
 
-    this.logger.warn(`Revoked key ${keyId} for agent ${agentId}`, { reason });
+    this.logger.warn(`Revoked secret ${keyId} for agent ${agentId}`, { reason });
   }
 
   /**
-   * Rotate to a new key
+   * Rotate to a new secret
    */
-  async rotateKey(agentId: AgentId, newPublicKey: string): Promise<void> {
-    const oldKey = this.keys.get(agentId);
+  async rotateKey(agentId: AgentId, newSecret: string): Promise<void> {
+    const oldSecret = this.secrets.get(agentId);
 
-    if (oldKey) {
-      // Revoke old key
-      const oldKeyId = this.generateKeyId(oldKey);
+    if (oldSecret) {
+      // Revoke old secret
+      const oldKeyId = this.generateKeyId(oldSecret);
       await this.revokeKey(agentId, oldKeyId, "Key rotation");
     }
 
-    // Register new key
-    await this.registerAgentKey(agentId, newPublicKey);
+    // Register new secret
+    await this.registerAgentKey(agentId, newSecret);
 
-    this.logger.info(`Rotated key for agent ${agentId}`);
+    this.logger.info(`Rotated secret for agent ${agentId}`);
   }
 
   /**
    * Check if a key is valid (not revoked)
    */
-  async isKeyValid(agentId: AgentId, publicKey: string): Promise<boolean> {
-    const keyId = this.generateKeyId(publicKey);
+  async isKeyValid(agentId: AgentId, keyId: string): Promise<boolean> {
     const revoked = this.revokedKeys.get(agentId) || [];
-
     const isRevoked = revoked.some((r) => r.keyId === keyId);
     return !isRevoked;
   }
@@ -146,24 +152,24 @@ export class AgentKeyRegistry implements IAgentKeyRegistry {
    * Get all registered agents
    */
   getRegisteredAgents(): AgentId[] {
-    return Array.from(this.keys.keys());
+    return Array.from(this.secrets.keys());
   }
 
   /**
-   * Check if an agent has a registered key
+   * Check if an agent has a registered secret
    */
   hasRegisteredKey(agentId: AgentId): boolean {
-    return this.keys.has(agentId);
+    return this.secrets.has(agentId);
   }
 
   /**
-   * Clear all keys (for testing purposes)
+   * Clear all secrets (for testing purposes)
    */
   clearAll(): void {
-    this.keys.clear();
+    this.secrets.clear();
     this.metadata.clear();
     this.revokedKeys.clear();
-    this.logger.warn("All keys cleared from registry");
+    this.logger.warn("All secrets cleared from registry");
   }
 
   /**
@@ -176,16 +182,23 @@ export class AgentKeyRegistry implements IAgentKeyRegistry {
     );
 
     return {
-      registeredKeys: this.keys.size,
+      registeredKeys: this.secrets.size,
       revokedKeys: totalRevoked,
       agentsWithRevokedKeys: this.revokedKeys.size,
     };
   }
 
   /**
-   * Generate a unique key ID from public key
+   * Generate a unique key ID from secret
    */
-  private generateKeyId(publicKey: string): string {
-    return createHash("sha256").update(publicKey).digest("hex").slice(0, 16);
+  private generateKeyId(secret: string): string {
+    return createHash("sha256").update(secret).digest("hex").slice(0, 16);
+  }
+
+  /**
+   * Generate a random shared secret
+   */
+  static generateSecret(): string {
+    return randomBytes(32).toString("base64");
   }
 }

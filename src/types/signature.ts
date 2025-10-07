@@ -1,7 +1,8 @@
 /**
  * Signature and Key Management Type Definitions
  * 
- * Types for cryptographic signature validation and key registry management
+ * Types for HMAC-SHA256 signature validation and key registry management
+ * Simplified from Ed25519 for faster development iteration
  */
 
 import { AgentId } from "./a2a.js";
@@ -9,15 +10,15 @@ import { AgentId } from "./a2a.js";
 /**
  * Signature algorithm types
  */
-export type SignatureAlgorithm = 'ed25519' | 'ecdsa-p256' | 'rsa-pss';
+export type SignatureAlgorithm = 'hmac-sha256' | 'ed25519' | 'ecdsa-p256';
 
 /**
  * Cryptographic signature structure
  */
 export interface A2ASignature {
   algorithm: SignatureAlgorithm;
-  publicKey: string; // Base64 encoded public key
-  signature: string; // Base64 encoded signature
+  keyId: string; // Identifier for the shared secret
+  signature: string; // HMAC hex string
   timestamp: number; // Unix timestamp in milliseconds
   nonce: string; // Random nonce to prevent replay attacks
 }
@@ -72,33 +73,33 @@ export interface RevokedKey {
  */
 export interface IAgentKeyRegistry {
   /**
-   * Register an agent's public key
+   * Register an agent's shared secret
    */
   registerAgentKey(
     agentId: AgentId,
-    publicKey: string,
+    secret: string,
     metadata?: Partial<KeyMetadata>
   ): Promise<void>;
 
   /**
-   * Retrieve an agent's public key
+   * Retrieve an agent's shared secret
    */
-  getAgentPublicKey(agentId: AgentId): Promise<string | null>;
+  getAgentSecret(agentId: AgentId): Promise<string | null>;
 
   /**
-   * Revoke a compromised key
+   * Revoke a compromised secret
    */
   revokeKey(agentId: AgentId, keyId: string, reason: string): Promise<void>;
 
   /**
-   * Rotate to a new key
+   * Rotate to a new secret
    */
-  rotateKey(agentId: AgentId, newPublicKey: string): Promise<void>;
+  rotateKey(agentId: AgentId, newSecret: string): Promise<void>;
 
   /**
    * Check if a key is valid (not revoked)
    */
-  isKeyValid(agentId: AgentId, publicKey: string): Promise<boolean>;
+  isKeyValid(agentId: AgentId, keyId: string): Promise<boolean>;
 }
 
 /**

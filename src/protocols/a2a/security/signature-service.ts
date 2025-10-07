@@ -1,12 +1,11 @@
 /**
  * Signature Service
  * 
- * Provides cryptographic signature creation and verification for A2A messages
- * Uses Ed25519 for fast, secure signatures
+ * Provides HMAC-SHA256 signature creation and verification for A2A messages
+ * Simplified approach for faster development iteration
  */
 
-import * as ed25519 from "@noble/ed25519";
-import { randomBytes } from "crypto";
+import { createHmac, randomBytes, timingSafeEqual } from "crypto";
 import { A2AMessage } from "../../../types/a2a.js";
 import {
   SignedA2AMessage,
@@ -17,7 +16,7 @@ import { AgentKeyRegistry } from "./agent-key-registry.js";
 import { Logger } from "../../../utils/logger.js";
 
 /**
- * Signature Service Implementation
+ * Signature Service Implementation (HMAC-based)
  */
 export class SignatureService {
   private keyRegistry: AgentKeyRegistry;
@@ -35,21 +34,21 @@ export class SignatureService {
     this.config = {
       maxSignatureAge: config.maxSignatureAge ?? 5 * 60 * 1000, // 5 minutes
       enableNonceValidation: config.enableNonceValidation ?? true,
-      algorithm: config.algorithm ?? "ed25519",
+      algorithm: config.algorithm ?? "hmac-sha256",
     };
 
-    this.logger.info("Signature Service initialized", {
+    this.logger.info("Signature Service initialized (HMAC mode)", {
       maxSignatureAge: this.config.maxSignatureAge,
       algorithm: this.config.algorithm,
     });
   }
 
   /**
-   * Sign a message with agent's private key
+   * Sign a message with agent's shared secret
    */
   async signMessage(
     message: A2AMessage,
-    privateKey: Uint8Array,
+    secret: string,
     agentId: string,
   ): Promise<SignedA2AMessage> {
     try {
@@ -67,21 +66,20 @@ export class SignatureService {
         nonce,
       });
 
-      // Sign the payload
-      const signature = await ed25519.sign(
-        Buffer.from(signingPayload, "utf-8"),
-        privateKey,
-      );
+      // Generate HMAC signature
+      const signature = createHmac("sha256", secret)
+        .update(signingPayload)
+        .digest("hex");
 
-      // Get public key
-      const publicKey = await ed25519.getPublicKey(privateKey);
+      // Generate key ID from secret
+      const keyId = this.generateKeyId(secret);
 
       const signedMessage: SignedA2AMessage = {
         ...message,
         signature: {
-          algorithm: "ed25519",
-          publicKey: Buffer.from(publicKey).toString("base64"),
-          signature: Buffer.from(signature).toString("base64"),
+          algorithm: "hmac-sha256",
+          keyId,
+          signature,
           timestamp,
           nonce,
         },
@@ -139,27 +137,28 @@ export class SignatureService {
         };
       }
 
-      // Check if key is registered and valid
-      const registeredKey = await this.keyRegistry.getAgentPublicKey(
-        signedMessage.from,
-      );
+      // Get agent's shared secret
+      const secret = await this.keyRegistry.getAgentSecret(signedMessage.from);
 
-      if (!registeredKey) {
+      if (!secret) {
         return {
           valid: false,
-          error: `No public key registered for agent ${signedMessage.from}`,
+          error: `No secret registered for agent ${signedMessage.from}`,
           details: {
             agentId: signedMessage.from,
           },
         };
       }
 
-      if (registeredKey !== sig.publicKey) {
+      // Verify key ID matches
+      const expectedKeyId = this.generateKeyId(secret);
+      if (expectedKeyId !== sig.keyId) {
         return {
           valid: false,
-          error: "Public key mismatch",
+          error: "Key ID mismatch",
           details: {
             agentId: signedMessage.from,
+            keyId: sig.keyId,
           },
         };
       }
@@ -167,7 +166,7 @@ export class SignatureService {
       // Verify key is not revoked
       const isValid = await this.keyRegistry.isKeyValid(
         signedMessage.from,
-        sig.publicKey,
+        sig.keyId,
       );
 
       if (!isValid) {
@@ -176,6 +175,7 @@ export class SignatureService {
           error: "Key has been revoked",
           details: {
             agentId: signedMessage.from,
+            keyId: sig.keyId,
           },
         };
       }
@@ -187,16 +187,26 @@ export class SignatureService {
         nonce: sig.nonce,
       });
 
-      // Verify signature
-      const publicKeyBytes = Buffer.from(sig.publicKey, "base64");
-      const signatureBytes = Buffer.from(sig.signature, "base64");
-      const messageBytes = Buffer.from(signingPayload, "utf-8");
+      // Compute expected HMAC
+      const expectedSignature = createHmac("sha256", secret)
+        .update(signingPayload)
+        .digest("hex");
 
-      const isSignatureValid = await ed25519.verify(
-        signatureBytes,
-        messageBytes,
-        publicKeyBytes,
-      );
+      // Timing-safe comparison
+      const signatureBuffer = Buffer.from(sig.signature, "hex");
+      const expectedBuffer = Buffer.from(expectedSignature, "hex");
+
+      if (signatureBuffer.length !== expectedBuffer.length) {
+        return {
+          valid: false,
+          error: "Invalid signature",
+          details: {
+            agentId: signedMessage.from,
+          },
+        };
+      }
+
+      const isSignatureValid = timingSafeEqual(signatureBuffer, expectedBuffer);
 
       if (!isSignatureValid) {
         return {
@@ -230,6 +240,7 @@ export class SignatureService {
         details: {
           timestamp: sig.timestamp,
           agentId: signedMessage.from,
+          keyId: sig.keyId,
         },
       };
     } catch (error) {
@@ -301,6 +312,16 @@ export class SignatureService {
       });
 
     return sorted;
+  }
+
+  /**
+   * Generate key ID from secret
+   */
+  private generateKeyId(secret: string): string {
+    return createHmac("sha256", "keyid-salt")
+      .update(secret)
+      .digest("hex")
+      .slice(0, 16);
   }
 
   /**

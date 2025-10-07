@@ -1,7 +1,7 @@
 /**
  * Performance Tests: Signature Operations
  * 
- * Benchmarks for signature creation, verification, and throughput
+ * Benchmarks for HMAC-SHA256 signature creation, verification, and throughput
  */
 
 import { describe, test, expect, beforeEach } from "vitest";
@@ -22,7 +22,7 @@ describe("Performance: Signature Operations", () => {
   test("should sign messages at >50 per second", async () => {
     const agentId = "perf-agent-001";
     const keyPair = await generateTestKeyPair(agentId);
-    await keyRegistry.registerAgentKey(agentId, keyPair.publicKeyBase64);
+    await keyRegistry.registerAgentKey(agentId, keyPair.privateKey);
 
     const messages = createMultipleMessages(100, agentId, "target-agent");
     const startTime = Date.now();
@@ -46,7 +46,7 @@ describe("Performance: Signature Operations", () => {
   test("should verify signatures at >1000 per second", async () => {
     const agentId = "perf-agent-002";
     const keyPair = await generateTestKeyPair(agentId);
-    await keyRegistry.registerAgentKey(agentId, keyPair.publicKeyBase64);
+    await keyRegistry.registerAgentKey(agentId, keyPair.privateKey);
 
     // Pre-sign 1000 messages
     const messages = createMultipleMessages(1000, agentId, "target-agent");
@@ -73,7 +73,7 @@ describe("Performance: Signature Operations", () => {
   test("should handle 100 concurrent verifications", async () => {
     const agentId = "perf-agent-003";
     const keyPair = await generateTestKeyPair(agentId);
-    await keyRegistry.registerAgentKey(agentId, keyPair.publicKeyBase64);
+    await keyRegistry.registerAgentKey(agentId, keyPair.privateKey);
 
     // Create and sign 100 messages
     const messages = createMultipleMessages(100, agentId, "target-agent");
@@ -103,9 +103,9 @@ describe("Performance: Signature Operations", () => {
   test("should maintain performance with 1000 operations (memory test)", async () => {
     const keyPairs = await generateMultipleKeyPairs(10, "perf-agent");
 
-    // Register all keys
+    // Register all secrets
     for (const kp of keyPairs) {
-      await keyRegistry.registerAgentKey(kp.agentId, kp.publicKeyBase64);
+      await keyRegistry.registerAgentKey(kp.agentId, kp.privateKey);
     }
 
     // Perform 1000 sign+verify operations
@@ -145,7 +145,7 @@ describe("Performance: Signature Operations", () => {
     // Register 100 agents
     const keyPairs = await generateMultipleKeyPairs(100, "lookup-agent");
     for (const kp of keyPairs) {
-      await keyRegistry.registerAgentKey(kp.agentId, kp.publicKeyBase64);
+      await keyRegistry.registerAgentKey(kp.agentId, kp.privateKey);
     }
 
     // Measure lookup performance
@@ -154,13 +154,13 @@ describe("Performance: Signature Operations", () => {
 
     for (let i = 0; i < lookupCount; i++) {
       const agentId = `lookup-agent-${(i % 100).toString().padStart(3, "0")}`;
-      await keyRegistry.getAgentPublicKey(agentId);
+      await keyRegistry.getAgentSecret(agentId);
     }
 
     const duration = Date.now() - startTime;
     const avgLookupTime = duration / lookupCount;
 
     expect(avgLookupTime).toBeLessThan(1); // <1ms per lookup
-    console.log(`Average key lookup time: ${avgLookupTime.toFixed(4)}ms`);
+    console.log(`Average secret lookup time: ${avgLookupTime.toFixed(4)}ms`);
   });
 });
