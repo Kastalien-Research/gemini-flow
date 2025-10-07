@@ -16,6 +16,13 @@
 .swarm/
 .hive-mind/
 .benchmarks/
+.roo/
+
+# MCP and AI assistant configs (may contain secrets)
+.mcp.json
+
+# Specification and planning docs
+specs/
 
 # CI/CD and Quality Assurance artifacts
 reports/
