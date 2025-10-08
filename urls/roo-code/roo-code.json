@@ -1,0 +1,3044 @@
+[
+  {
+    "url": "https://docs.roocode.com/search",
+    "tags": [
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/access-mcp-resource",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "mcp"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/apply-diff",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "editing"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/ask-followup-question",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "conversation"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/attempt-completion",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "workflow"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/browser-action",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "browser"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/codebase-search",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/execute-command",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "terminal"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/insert-content",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "editing"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/list-code-definition-names",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "code-analysis"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/list-files",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "file-operations"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/new-task",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "task-orchestration"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/read-file",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "file-operations"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/run-slash-command",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "slash-commands"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/search-and-replace",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "editing"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/search-files",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/switch-mode",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "modes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/tool-use-overview",
+    "tags": [
+      "advanced-usage",
+      "tools"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/update-todo-list",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "task-management"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/use-mcp-tool",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "mcp"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/available-tools/write-to-file",
+    "tags": [
+      "advanced-usage",
+      "tools",
+      "file-operations"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/context-poisoning",
+    "title": "Context Poisoning | Roo Code Documentation",
+    "description": "Learn about context poisoning in AI coding assistants, its symptoms, causes, and effective recovery strategies to maintain accurate AI ...",
+    "tags": [
+      "advanced-usage",
+      "troubleshooting",
+      "best-practices"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/footgun-prompting",
+    "title": "Footgun Prompting: Override System Prompts - Roo Code Docs",
+    "description": "Override File: Create a file named .roo/system-prompt-{mode-slug} in your workspace root (e.g., .roo/system-prompt-code for the Code mode).",
+    "tags": [
+      "advanced-usage",
+      "customization",
+      "system-prompts"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/large-projects",
+    "title": "Working with Large Projects | Roo Code Documentation",
+    "description": "Strategies for Managing Context​ · Be Specific: When referring to files or code, use specific file paths and function names. · Use Context ...",
+    "tags": [
+      "advanced-usage",
+      "performance",
+      "best-practices"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/local-development-setup",
+    "tags": [
+      "advanced-usage",
+      "setup",
+      "development"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/local-models",
+    "title": "Using Local Models | Roo Code Documentation",
+    "description": "Using Local Models. Roo Code supports running language models locally on your own machine using Ollama and LM Studio.",
+    "tags": [
+      "advanced-usage",
+      "local-ai",
+      "ollama",
+      "lm-studio"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/prompt-engineering",
+    "title": "Prompt Engineering Tips | Roo Code Documentation",
+    "description": "Prompt Engineering Tips. Prompt engineering is the art of crafting effective instructions for AI models like Roo Code.",
+    "tags": [
+      "advanced-usage",
+      "prompting",
+      "best-practices"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/prompt-structure",
+    "title": "Prompt Structure | Roo Code Documentation",
+    "description": "Understand the technical structure of prompts in Roo Code. Learn how messages are constructed, system prompts work, and optimize your ...",
+    "tags": [
+      "advanced-usage",
+      "prompting",
+      "technical"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/rate-limits-costs",
+    "tags": [
+      "advanced-usage",
+      "billing",
+      "api-limits"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/advanced-usage/roo-code-nightly",
+    "tags": [
+      "advanced-usage",
+      "experimental",
+      "development"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/basic-usage/context-mentions",
+    "title": "Context Mentions | Roo Code Documentation",
+    "description": "Learn how to use context mentions (@) in Roo Code to reference files, folders, problems, terminal output, and Git commits for more accurate ...",
+    "tags": [
+      "basic-usage",
+      "getting-started",
+      "context",
+      "@-mentions"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/basic-usage/how-tools-work",
+    "tags": [
+      "basic-usage",
+      "getting-started",
+      "tools",
+      "concepts"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/basic-usage/the-chat-interface",
+    "tags": [
+      "basic-usage",
+      "getting-started",
+      "ui",
+      "interface"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/basic-usage/typing-your-requests",
+    "tags": [
+      "basic-usage",
+      "getting-started",
+      "prompting"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/basic-usage/using-modes",
+    "title": "Using Modes | Roo Code Documentation",
+    "description": "Tailor Roo Code's behavior by customizing existing modes or creating new specialized assistants. Define tool access, file permissions, and ...",
+    "tags": [
+      "basic-usage",
+      "getting-started",
+      "modes",
+      "customization"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/faq",
+    "title": "Frequently Asked Questions | Roo Code Documentation",
+    "description": "This page answers some common questions about Roo Code. General What is Roo Code? Roo Code is an AI-powered autonomous coding agent that lives in your editor.",
+    "tags": [
+      "faq",
+      "help"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features",
+    "tags": []
+  },
+  {
+    "url": "https://docs.roocode.com/features/api-configuration-profiles",
+    "title": "API Configuration Profiles | Roo Code Documentation",
+    "description": "Creating a Profile​ · Open Settings by clicking the gear icon → Providers · Click the \"+\" button next to the profile selector. Profile selector ...",
+    "tags": [
+      "features",
+      "api-config",
+      "providers"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/auto-approving-actions",
+    "title": "Auto-Approving Actions | Roo Code Documentation",
+    "description": "SECURITY WARNING: Auto-approve settings bypass confirmation prompts, giving Roo direct access to your system. This can result in data loss, ...",
+    "tags": [
+      "features",
+      "automation",
+      "security"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/boomerang-tasks",
+    "title": "Boomerang Tasks: Orchestrate Complex Workflows",
+    "description": "Boomerang Tasks (also known as subtasks or task orchestration) allow you to break down complex projects into smaller, manageable pieces using ...",
+    "tags": [
+      "features",
+      "task-orchestration",
+      "workflows"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/browser-use",
+    "title": "Browser Use | Roo Code Documentation",
+    "description": "How Browser Use Works​ · Launches automatically when you ask Roo to visit a website · Captures screenshots of web pages · Allows Roo to interact ...",
+    "tags": [
+      "features",
+      "browser",
+      "web-automation"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/checkpoints",
+    "title": "Checkpoints | Roo Code Documentation",
+    "description": "These snapshots, called checkpoints, are automatically created before file modifications occur, ensuring you can always undo unwanted changes.",
+    "tags": [
+      "features",
+      "version-control",
+      "undo"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/code-actions",
+    "title": "Code Actions | Roo Code Documentation",
+    "description": "Access Roo Code's AI assistance directly in your editor with Code Actions. Get instant fixes, explanations, and improvements through ...",
+    "tags": [
+      "features",
+      "vscode-integration",
+      "editor"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/codebase-indexing",
+    "title": "Codebase Indexing | Roo Code Documentation",
+    "description": "Learn how Codebase Indexing helps Roo Code understand large projects using AI embeddings and semantic search. Setup guide for OpenAI and ...",
+    "tags": [
+      "features",
+      "search",
+      "embeddings",
+      "semantic-search"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/concurrent-file-reads",
+    "title": "Concurrent File Reads (AKA Multi-File Reads) - Roo Code Docs",
+    "description": "Key Features​ · Read up to 100 files in a single request. · Enabled by default for a faster, more streamlined workflow. · Configurable limit ...",
+    "tags": [
+      "features",
+      "performance",
+      "file-operations"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/custom-instructions",
+    "title": "Custom Instructions | Roo Code Documentation",
+    "description": "Learn how to use custom instructions to tailor Roo Code's behavior to your preferences, coding style, and project requirements.",
+    "tags": [
+      "features",
+      "customization",
+      "prompting"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/custom-modes",
+    "title": "Customizing Modes | Roo Code Documentation",
+    "description": "The interface provides fields for Name , Slug , Description , Save Location , Role Definition , When to Use (optional) , Available Tools , and ...",
+    "tags": [
+      "features",
+      "modes",
+      "customization"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/diagnostics-integration",
+    "title": "Diagnostics Integration | Roo Code Documentation",
+    "description": "Leverage Roo Code's integration with VSCode's Problems panel to automatically detect, understand, and fix code errors, warnings, ...",
+    "tags": [
+      "features",
+      "error-detection",
+      "debugging"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/enhance-prompt",
+    "title": "Enhance Prompt | Roo Code Documentation",
+    "description": "The \"Enhance Prompt\" feature in Roo Code helps you improve the quality and effectiveness of your prompts before sending them to the AI model. By ...",
+    "tags": [
+      "features",
+      "prompting",
+      "ai-assistance"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/experimental/background-editing",
+    "title": "Background Editing | Roo Code Documentation",
+    "description": "Learn about the experimental Background Editing setting that allows uninterrupted coding while Roo Code makes file edits in the background.",
+    "tags": [
+      "features",
+      "experimental",
+      "editing",
+      "performance"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/experimental/concurrent-file-edits",
+    "tags": [
+      "features",
+      "experimental",
+      "editing",
+      "performance"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/experimental/experimental-features",
+    "title": "Experimental Features | Roo Code Documentation",
+    "description": "Run Slash Command - Execute predefined slash commands for templated instructions and workflow automation. Providing Feedback​. If you encounter ...",
+    "tags": [
+      "features",
+      "experimental"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/experimental/power-steering",
+    "tags": [
+      "features",
+      "experimental",
+      "ai-control"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/fast-edits",
+    "title": "Diff/Fast Edits | Roo Code Documentation",
+    "description": "Roo Code offers an advanced setting to change how it edits files, using diffs (differences) instead of rewriting entire files. Enabling this ...",
+    "tags": [
+      "features",
+      "editing",
+      "performance",
+      "diffs"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/image-generation",
+    "title": "Image Generation | Roo Code Documentation",
+    "description": "Generate new images from text prompts or edit existing images in Roo Code using OpenRouter API. Transform, enhance, and save AI-processed ...",
+    "tags": [
+      "features",
+      "ai-generation",
+      "images"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/intelligent-context-condensing",
+    "title": "Intelligent Context Condensing | Roo Code Documentation",
+    "description": "Learn how Intelligent Context Condensing helps manage long conversations by summarizing earlier dialogue to prevent information loss when ...",
+    "tags": [
+      "features",
+      "context-management",
+      "performance"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/keyboard-shortcuts",
+    "title": "Keyboard Navigation | Roo Code Documentation",
+    "description": "Master keyboard navigation in Roo Code with customizable shortcuts, command execution, and prompt history navigation for efficient coding ...",
+    "tags": [
+      "features",
+      "keyboard",
+      "productivity"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/marketplace",
+    "title": "Roo Code Marketplace | Roo Code Documentation",
+    "description": "The Roo Code Marketplace is a central hub for discovering and installing community-contributed extensions, known as MCPs (Model Context Protocol) ...",
+    "tags": [
+      "features",
+      "mcp",
+      "extensions"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/mcp/mcp-vs-api",
+    "tags": [
+      "features",
+      "mcp",
+      "concepts",
+      "comparison"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/mcp/overview",
+    "title": "Model Context Protocol (MCP) | Roo Code Documentation",
+    "description": "Learn about the Model Context Protocol (MCP) in Roo Code. Discover how to extend AI capabilities with custom tools, resources, ...",
+    "tags": [
+      "features",
+      "mcp",
+      "getting-started"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/mcp/recommended-mcp-servers",
+    "tags": [
+      "features",
+      "mcp",
+      "recommendations"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/mcp/server-transports",
+    "title": "MCP Server Transports: STDIO, Streamable HTTP & SSE",
+    "description": "Model Context Protocol (MCP) supports three primary transport mechanisms for communication between Roo Code and MCP servers: Standard Input/ ...",
+    "tags": [
+      "features",
+      "mcp",
+      "technical",
+      "configuration"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/mcp/using-mcp-in-roo",
+    "tags": [
+      "features",
+      "mcp",
+      "integration"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/mcp/what-is-mcp",
+    "tags": [
+      "features",
+      "mcp",
+      "concepts"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/message-queueing",
+    "title": "Message Queueing | Roo Code Documentation",
+    "description": "Message queueing lets you type and send messages while Roo is still working. Just type your message and hit Enter - it gets queued and will be ...",
+    "tags": [
+      "features",
+      "workflow",
+      "async"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/model-temperature",
+    "title": "Model Temperature | Roo Code Docs",
+    "description": "Temperature controls the randomness of AI model outputs. Adjusting this setting optimizes results for different tasks - from precise code ...",
+    "tags": [
+      "features",
+      "ai-config",
+      "model-settings"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/more-features",
+    "title": "Additional Features | Roo Code Documentation",
+    "description": "To use Text-to-Speech, simply enable it in the Roo Code settings. Once enabled, a speaker icon will appear next to each AI response in the chat.",
+    "tags": [
+      "features"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/rooignore",
+    "title": "Using .rooignore to Control File Access - Roo Code Docs",
+    "description": "Learn how to use .rooignore files to control Roo Code's file access, protect sensitive information, and manage which files the AI can read ...",
+    "tags": [
+      "features",
+      "file-filtering",
+      "security"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/settings-management",
+    "title": "Import, Export, and Reset Settings | Roo Code Documentation",
+    "description": "Manage your Roo Code settings by exporting, importing, or resetting them to defaults.",
+    "tags": [
+      "features",
+      "configuration",
+      "import-export"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/shell-integration",
+    "title": "Terminal Shell Integration | Roo Code Documentation",
+    "description": "Terminal Shell Integration is a key feature that enables Roo Code to execute commands in your terminal and intelligently process their output.",
+    "tags": [
+      "features",
+      "terminal",
+      "shell"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/slash-commands",
+    "title": "Slash Commands | Roo Code Documentation",
+    "description": "Learn how to create and use custom slash commands in Roo Code to automate workflows and extend functionality with markdown-based ...",
+    "tags": [
+      "features",
+      "slash-commands",
+      "automation"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/suggested-responses",
+    "title": "Suggested Responses | Roo Code Documentation",
+    "description": "Learn how suggested responses in Roo Code help you quickly answer follow-up questions with pre-formulated options, speeding up your ...",
+    "tags": [
+      "features",
+      "conversation",
+      "ui"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/features/task-todo-list",
+    "title": "Task Todo List | Roo Code Documentation",
+    "description": "Todo lists are automatically created for complex tasks, multi-step workflows, or when using Architect mode. You can also manually trigger them ...",
+    "tags": [
+      "features",
+      "task-management",
+      "todos"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/getting-started/connecting-api-provider",
+    "tags": [
+      "getting-started",
+      "api-config",
+      "providers"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/getting-started/installing",
+    "title": "Installing Roo Code | Roo Code Documentation",
+    "description": "Roo Code is a VS Code extension that brings AI-powered coding assistance directly to your editor. Install using one of these methods:.",
+    "tags": [
+      "getting-started",
+      "installation",
+      "setup"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/getting-started/your-first-task",
+    "tags": [
+      "getting-started",
+      "tutorial",
+      "quickstart"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/anthropic",
+    "title": "Using Anthropic With Roo Code",
+    "description": "Using Anthropic With Roo Code. Anthropic is an AI safety and research company that builds reliable, interpretable, and steerable AI systems.",
+    "tags": [
+      "providers",
+      "api-config",
+      "anthropic",
+      "claude"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/bedrock",
+    "title": "Using AWS Bedrock With Roo Code",
+    "description": "Roo Code supports accessing models through Amazon Bedrock, a fully managed service that makes a selection of high-performing foundation models (FMs) from ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "aws",
+      "bedrock"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/cerebras",
+    "title": "Using Cerebras With Roo Code",
+    "description": "Configure Cerebras AI's ultra-fast inference models in Roo Code. Access free and paid tiers with speeds up to 2600 tokens/second for coding ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "cerebras",
+      "fast-inference"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/chutes",
+    "title": "Using Chutes AI With Roo Code",
+    "description": "Configure Chutes AI with Roo Code for free access to various large language models. Get started with open-source and proprietary AI models.",
+    "tags": [
+      "providers",
+      "api-config",
+      "chutes",
+      "free"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/claude-code",
+    "title": "Claude Code Provider | Roo Code Documentation",
+    "description": "Access Claude AI models through the official CLI in Roo Code. No API keys needed, supports advanced reasoning and transparent cost tracking.",
+    "tags": [
+      "providers",
+      "api-config",
+      "claude-code-cli"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/deepinfra",
+    "title": "Using DeepInfra With Roo Code",
+    "description": "DeepInfra provides cost-effective access to high-performance open-source models with features like prompt caching, vision support, and ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "deepinfra"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/deepseek",
+    "title": "Using DeepSeek With Roo Code",
+    "description": "Using DeepSeek With Roo Code. Roo Code supports accessing models through the DeepSeek API, including deepseek-chat and deepseek-reasoner .",
+    "tags": [
+      "providers",
+      "api-config",
+      "deepseek"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/doubao",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/featherless",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/fireworks",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/gemini",
+    "title": "Using Google Gemini With Roo Code",
+    "description": "Using Google Gemini With Roo Code. Roo Code supports Google's Gemini family of models through the Google AI Gemini API. Website: https://ai.",
+    "tags": [
+      "providers",
+      "api-config",
+      "google",
+      "gemini"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/glama",
+    "title": "Using Glama With Roo Code",
+    "description": "Glama provides access to a variety of language models through a unified API, including models from Anthropic, OpenAI, and others. It offers ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "glama"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/groq",
+    "title": "Using Groq With Roo Code",
+    "description": "Groq specializes in providing very high-speed inference for large language models, utilizing their custom-built Language Processing Units (LPUs) ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "groq",
+      "fast-inference"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/huggingface",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/human-relay",
+    "title": "Human Relay Provider | Roo Code Documentation",
+    "description": "Paste to Web AI: Go to the web interface of your chosen AI (e.g., chat.openai.com, claude.ai) and paste the message from your clipboard into the ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "manual",
+      "clipboard"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/io-intelligence",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/litellm",
+    "title": "Using LiteLLM With Roo Code",
+    "description": "LiteLLM is a versatile tool that provides a unified interface to over 100 Large Language Models (LLMs) by offering an OpenAI-compatible API.",
+    "tags": [
+      "providers",
+      "api-config",
+      "litellm",
+      "aggregator"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/lmstudio",
+    "title": "Using LM Studio With Roo Code",
+    "description": "Learn how to set up and use LM Studio with Roo Code for running local language models with OpenAI-compatible API support.",
+    "tags": [
+      "providers",
+      "api-config",
+      "local-ai",
+      "lm-studio"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/mistral",
+    "title": "Using Mistral AI With Roo Code",
+    "description": "Model ID, Model Default Temperature, Function Calling, Vision / Image support. codestral-latest, 0.3, ✓, ❌. mistral-large-latest, 0.7, ✓, ❌.",
+    "tags": [
+      "providers",
+      "api-config",
+      "mistral"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/ollama",
+    "title": "Using Ollama With Roo Code",
+    "description": "Setting up Ollama​ · Download and Install Ollama: Download the Ollama installer for your operating system from the Ollama website. Follow the ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "local-ai",
+      "ollama"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/openai",
+    "title": "Using OpenAI With Roo Code",
+    "description": "Create a Key: Click \"Create new secret key\". Give your key a descriptive name (e.g., \"Roo Code\"). Copy the Key ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "openai",
+      "gpt"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/openai-compatible",
+    "title": "Using OpenAI Compatible Providers With Roo Code",
+    "description": "By using an OpenAI-compatible provider, you can leverage the flexibility of Roo Code with a wider range of AI models. Remember to always consult ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "openai",
+      "gpt",
+      "openai-compatible",
+      "custom"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/openrouter",
+    "title": "Using OpenRouter With Roo Code",
+    "description": "OpenRouter is an AI platform that provides access to a wide variety of language models from different providers, all through a single API. This ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "openrouter",
+      "aggregator"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/qwen-code",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/requesty",
+    "title": "Using Requesty With Roo Code",
+    "description": "Configure Requesty in Roo Code to access 150+ LLMs with cost optimizations, unified billing, and comprehensive usage tracking features.",
+    "tags": [
+      "providers",
+      "api-config",
+      "requesty",
+      "aggregator"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/roo-code-cloud",
+    "title": "Roo Code Cloud Provider",
+    "description": "Access the free grok-code-fast-1 AI model through Roo Code Cloud. No API keys or payment required during the promotional period.",
+    "tags": [
+      "providers",
+      "api-config",
+      "roo-cloud",
+      "free"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/sambanova",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/unbound",
+    "title": "Using Unbound With Roo Code",
+    "description": "Using Unbound With Roo Code. Roo Code supports accessing models through Unbound, a platform that focuses on providing secure and reliable ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "unbound"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/vercel-ai-gateway",
+    "title": "Using Vercel AI Gateway With Roo Code",
+    "description": "The AI Gateway provides a unified API to access hundreds of models through a single endpoint. It gives you the ability to set budgets, monitor ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "vercel",
+      "gateway"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/vertex",
+    "title": "Using GCP Vertex AI With Roo Code",
+    "description": "Using GCP Vertex AI With Roo Code. Roo Code supports accessing models through Google Cloud Platform's Vertex AI, a managed machine learning ...",
+    "tags": [
+      "providers",
+      "api-config",
+      "google",
+      "vertex-ai"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/vscode-lm",
+    "title": "Using VS Code Language Model API With Roo Code",
+    "description": "Use GitHub Copilot and other VS Code language models in Roo Code through the experimental Language Model API integration.",
+    "tags": [
+      "providers",
+      "api-config",
+      "vscode",
+      "github-copilot"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/xai",
+    "title": "Using xAI (Grok) With Roo Code",
+    "description": "xAI is the company behind Grok, a large language model known for its conversational abilities and large context window.",
+    "tags": [
+      "providers",
+      "api-config",
+      "xai",
+      "grok"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/providers/zai",
+    "tags": [
+      "providers",
+      "api-config"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/billing-subscriptions",
+    "tags": [
+      "roo-cloud",
+      "billing",
+      "subscription"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/dashboard",
+    "title": "Dashboard | Roo Code Documentation",
+    "description": "This allows you to access your dashboard from any web browser, even when not using the Roo Code extension. Dashboard Pages​. Home Page​. The ...",
+    "tags": [
+      "roo-cloud",
+      "ui",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/login",
+    "title": "Login/Signup | Roo Code Documentation",
+    "description": "Learn how to connect your Roo Code extension to Roo Code Cloud for task syncing, online history, and collaboration features.",
+    "tags": [
+      "roo-cloud",
+      "authentication",
+      "setup"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/roomote-control",
+    "title": "Roomote Control | Roo Code Documentation",
+    "description": "Remotely control Roo Code tasks running in VS Code from your browser. Monitoring is provided by Task Sync.",
+    "tags": [
+      "roo-cloud",
+      "remote-control",
+      "browser"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/task-sharing",
+    "tags": [
+      "roo-cloud",
+      "sharing",
+      "collaboration"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/task-sync",
+    "tags": [
+      "roo-cloud",
+      "sync",
+      "collaboration"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/roo-code-cloud/what-is-roo-code-cloud",
+    "tags": [
+      "roo-cloud",
+      "overview",
+      "getting-started"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/tips-and-tricks",
+    "title": "Tips & Tricks | Roo Code Documentation",
+    "description": "Discover expert tips and tricks for using Roo Code effectively. Learn best practices, productivity hacks, and advanced techniques.",
+    "tags": [
+      "tips",
+      "best-practices"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/tutorial-videos",
+    "title": "Tutorial Videos | Roo Code Documentation",
+    "description": "What is Roo Code Cloud? Roo Code Logo. Empowering developers to build better software faster with AI-powered tools and insights. GitHub. Issues ...",
+    "tags": [
+      "videos",
+      "tutorials"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes",
+    "title": "Update Notes | Roo Code Documentation",
+    "description": "Browse all Roo Code release notes and version updates. Find detailed changelogs, new features, bug fixes, and improvements for each version.",
+    "tags": []
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.15",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.16",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.17",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.18",
+    "title": "Roo Code 2.1.18 Release Notes",
+    "description": "Ship Faster with Roo Code Teams.Get early access now. Skip to main content. Roo Code Logo. ctrl K. 15.4k Install ·574.1k · Roo Code Logo.",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.19",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.20",
+    "title": "Roo Code 2.1.20 Release Notes",
+    "description": "Provider Updates​ ... Empowering developers to build better software faster with AI-powered tools and insights. ... Like most of the internet, we use cookies. Are ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.21",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.1.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2",
+    "title": "Roo Code 2.2 Release Notes (2025-02-27)",
+    "description": "Roo Code 2.2 Release Notes (2025-02-27). This release cycle introduced Model Context Protocol (MCP) support, enabling custom tools, ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.16",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.17",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.18",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.19",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.20",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.21",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.22",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.23",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.24",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.25",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.26",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.27",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.28",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.29",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.30",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.31",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.32",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.33",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.34",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.35",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.36",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.38",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.39",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.40",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.41",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.42",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.43",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.44",
+    "title": "Roo Code 2.2.44 Release Notes",
+    "description": "Roo Code 2.2.44 introduces automatic retries for failed API requests with configurable delay, improving reliability and connection ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.45",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.46",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v2.2.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.0",
+    "title": "Roo Code 3.0 Release Notes (2025-02-27)",
+    "description": "Key Feature: Chat Modes (v3.0.0)​ · Ask questions about system architecture or the codebase. · Engage in higher-level discussions before code ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.0.0",
+    "tags": [
+      "update-notes",
+      "major-release",
+      "major-version"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.0.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.0.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.0.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1",
+    "title": "Roo Code 3.1 Release Notes (2025-02-27)",
+    "description": "Revamped Prompt Enhancements (v3.1.0): The \"Enhance Prompt\" button now works with any provider and API configuration, allowing for fully ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.1.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10",
+    "title": "Roo Code 3.10 Release Notes (2025-03-25)",
+    "description": "Reading Large Files in Chunks: Roo Code can now read large files in chunks, allowing for more efficient processing and context utilization. ( ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.10.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11",
+    "title": "Roo Code 3.11 Release Notes (2025-03-30)",
+    "description": "Roo Code 3.11 introduces fast diff-based edits, API key balance checking, project-level MCP configs, and enhanced Gemini support.",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.15",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.16",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.17",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.11.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.12",
+    "title": "Roo Code 3.12 Release Notes (2025-04-17)",
+    "description": "Allowed users to bind a keyboard shortcut for accepting suggestions or input in the chat view (thanks axkirillov!). Improved file/folder context ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.12.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.12.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.12.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.12.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.13",
+    "title": "Roo Code 3.13 Release Notes (2025-04-18)",
+    "description": "Roo Code v3.13 introduces a redesigned chat interface with enhanced usability, including a new layout for multi-file context, ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.13.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.13.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.13.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.14",
+    "title": "Roo Code 3.14 Combined | Roo Code Documentation",
+    "description": "Override Warning: Roo Code now displays a warning indicator in the chat input when a system prompt override is active for the current mode.",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.14.0",
+    "title": "Roo Code 3.14.0 Release Notes (2025-04-23)",
+    "description": "Roo Code 3.14.0 Release Notes (2025-04-23). This release introduces Gemini prompt caching, improves several tools, and includes numerous bug ...",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.14.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.14.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.14.3",
+    "title": "Roo Code 3.14.3 Release Notes (2025-04-25)",
+    "description": "Roo Code 3.14.3 adds Boomerang Orchestrator as default mode, features a new minimalist home screen, and improves token estimation.",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15",
+    "title": "Roo Code 3.15 Release Notes (2025-05-05)",
+    "description": "Roo Code 3.15 adds Google Vertex prompt caching, terminal command fallback, enhanced Boomerang mode, and settings import/export.",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.15.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16",
+    "title": "Roo Code 3.16 Release Notes (2025-05-12)",
+    "description": "Roo Code 3.16 Release Notes (2025-05-12). These release notes include all the improvements from v3.16.x. Last updated with 3.16.6 on ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.0",
+    "title": "Roo Code 3.16.0 Release Notes",
+    "description": "Roo Code 3.16.0 introduces vertical tab navigation for settings, Groq and Chutes AI providers, clickable code references, ...",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.16.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.17",
+    "title": "Roo Code 3.17 Release Notes (2025-05-14)",
+    "description": "This field allows mode creators to provide specific instructions on the ideal scenarios for using a particular mode. Previously, or if this ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.17.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.17.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.17.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18",
+    "title": "Roo Code 3.18 Release Notes (2025-05-21)",
+    "description": "Roo Code 3.18 Release Notes (2025-05-21). This release introduces advanced AI models with enhanced reasoning capabilities, comprehensive context ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.18.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.0",
+    "title": "Roo Code 3.19.0 Release Notes (2025-05-30)",
+    "description": "This release focuses on streamlining the user interface with intelligent context condensing enabled by default, improved mode organization, ...",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.19.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.2.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.20",
+    "title": "Roo Code 3.20 Release Notes (2025-06-12)",
+    "description": "Navigate your prompt history with a terminal-like experience using the arrow keys. This feature makes it easy to reuse and refine previous ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.20.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.20.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.20.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.20.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.21.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.22.6",
+    "title": "Roo Code 3.22.6 Release Notes (2025-07-02)",
+    "description": "Roo Code 3.22.6 Release Notes (2025-07-02). This patch release introduces auto-approval features, mode import/export capabilities, improved ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23",
+    "title": "Roo Code 3.23 Release Notes",
+    "description": "QOL Improvements​ · Smarter Command Validation: Improved command validation logic that only auto-denies subshell commands if they contain denied ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.15",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.16",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.17",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.18",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.19",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.23.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.24.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.15",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.16",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.17",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.18",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.19",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.20",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.21",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.22",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.23",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.7",
+    "title": "Roo Code 3.25.7 Release Notes (2025-08-05)",
+    "description": "Three new AI providers join Roo Code - Claude Opus 4.1, Z AI, and Fireworks AI - plus quality of life improvements and bug fixes.",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.25.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.26.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.27.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.15",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.28.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3",
+    "title": "Roo Code 3.3 Release Notes (2025-02-27)",
+    "description": "Roo Code 3.3 Release Notes (2025-02-27). This extensive release cycle brings a wealth of features including native VS Code code actions, ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.13",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.14",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.15",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.16",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.17",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.18",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.19",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.20",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.21",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.22",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.23",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.24",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.25",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.26",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.3.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7",
+    "title": "Roo Code 3.7 Release Notes (2025-03-03)",
+    "description": "Roo Code 3.7 Release Notes (2025-03-03). This release cycle introduces Roo Code 3.7 with Claude Sonnet 3.7 support, expanded model ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.10",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.11",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.12",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.7",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.8",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.7.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8",
+    "title": "Roo Code 3.8 Release Notes (2025-03-13)",
+    "description": "This release cycle introduces opt-in telemetry, significant terminal architecture improvements, a multi-diff editing strategy, .rooignore support, and a ...",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.0",
+    "title": "Roo Code 3.8.0 Release Notes (2025-03-07)",
+    "description": "UX Improvements​ · Redesigned the settings page for easier navigation. (thanks cte!) · Made checkpoints asynchronous and excluded more files to ...",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.3",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.4",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.5",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.8.6",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.9",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.9.0",
+    "tags": [
+      "update-notes",
+      "major-release"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.9.1",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/update-notes/v3.9.2",
+    "tags": [
+      "update-notes"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com",
+    "title": "Roo Code Docs | Roo Code Documentation",
+    "description": "Roo Code is an AI-powered autonomous coding agent that lives in your editor. It helps you code faster and smarter, whether you're starting a new ...",
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "url": "https://docs.roocode.com/community",
+    "title": "Index | Roo Code Docs",
+    "description": "Welcome to the Roo Code community section! Here you'll find community projects that extend Roo Code's capabilities and a gallery of custom modes ...",
+    "tags": [
+      "community",
+      "extensions"
+    ]
+  }
+]

@@ -1,0 +1,1306 @@
+[
+  {
+    "url": "https://docs.firecrawl.dev/sdks/overview.md",
+    "tags": [
+      "sdks",
+      "overview"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/extract-get",
+    "title": "Get Extract Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "extraction",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/token-usage.md",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/proxies.md",
+    "tags": [
+      "features",
+      "proxies"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/queue-status",
+    "title": "Queue Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "queue"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/crewai",
+    "title": "CrewAI | Firecrawl",
+    "description": "Learn how to use Firecrawl with CrewAI",
+    "tags": [
+      "integrations",
+      "crewai"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/contributing/open-source-or-cloud",
+    "title": "Open Source vs Cloud | Firecrawl",
+    "description": "Understand the differences between Firecrawl's open-source and cloud offerings",
+    "tags": [
+      "contributing",
+      "open-source"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/extract",
+    "title": "Extract - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "extraction",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/batch-scrape",
+    "title": "Batch Scrape - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/contributing/guide.md",
+    "tags": [
+      "contributing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/credit-usage-historical",
+    "title": "Historical Credit Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/overview",
+    "title": "Webhooks | Firecrawl",
+    "description": "Real-time notifications for your Firecrawl operations",
+    "tags": [
+      "webhooks"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/credit-usage.md",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/langchain",
+    "title": "Langchain | Firecrawl",
+    "description": "Firecrawl integrates with Langchain as a document loader.",
+    "tags": [
+      "integrations",
+      "langchain"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/search.md",
+    "tags": [
+      "api-reference",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/observability.md",
+    "tags": [
+      "use-cases",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/seo-platforms",
+    "title": "SEO Platforms - Firecrawl Docs",
+    "description": "Optimize websites for AI assistants and search engines",
+    "tags": [
+      "use-cases",
+      "seo"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/security",
+    "title": "Webhook Security | Firecrawl",
+    "description": "Verify webhook authenticity and implement security best practices",
+    "tags": [
+      "webhooks",
+      "security"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/investment-finance.md",
+    "tags": [
+      "use-cases",
+      "finance"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/overview.md",
+    "tags": [
+      "use-cases"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/x402/search",
+    "title": "On-Demand Search - Firecrawl Docs",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-get-errors.md",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/stealth-mode.md",
+    "tags": [
+      "features",
+      "stealth-mode"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/product-ecommerce.md",
+    "tags": [
+      "use-cases",
+      "ecommerce"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-get",
+    "title": "Get Crawl Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape-get-errors",
+    "title": "Get Batch Scrape Errors - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/token-usage",
+    "title": "Token Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/crawl-delete",
+    "title": "Cancel Crawl - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/competitive-intelligence",
+    "title": "Competitive Intelligence - Firecrawl Docs",
+    "description": "Monitor competitor websites and track changes in real-time",
+    "tags": [
+      "use-cases",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/lead-enrichment.md",
+    "tags": [
+      "use-cases",
+      "sales"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/contributing/guide",
+    "title": "Running locally | Firecrawl",
+    "description": "Learn how to run Firecrawl locally to run on your own and/or contribute to the project.",
+    "tags": [
+      "contributing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/token-usage-historical.md",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/mcp-server",
+    "title": "Firecrawl MCP Server",
+    "description": "Use Firecrawl's API through the Model Context Protocol",
+    "tags": [
+      "mcp",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v0/api-reference/endpoint/crawl",
+    "title": "Crawl - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/map.md",
+    "tags": [
+      "api-reference",
+      "mapping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v0/advanced-scraping-guide",
+    "title": "Advanced Scraping Guide | Firecrawl",
+    "description": "Learn how to improve your Firecrawl scraping with advanced options.",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-post",
+    "title": "Crawl - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+    "title": "Introduction - Firecrawl Docs",
+    "description": "Firecrawl API Reference (v2)",
+    "tags": [
+      "api-reference",
+      "v2"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/advanced-scraping-guide.md",
+    "tags": [
+      "guides",
+      "advanced"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/sourcesyncai",
+    "title": "SourceSync.ai | Firecrawl",
+    "description": "Firecrawl integrates with SourceSync.ai for web scraping capabilities.",
+    "tags": [
+      "integrations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/developers-mcp.md",
+    "tags": [
+      "use-cases",
+      "ai-integration",
+      "mcp"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/batch-scrape.md",
+    "tags": [
+      "features",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/testing",
+    "title": "Webhook Testing & Debugging | Firecrawl",
+    "description": "Tools and techniques for developing and debugging webhooks",
+    "tags": [
+      "webhooks",
+      "testing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/contributing/self-host",
+    "title": "Self-hosting | Firecrawl",
+    "description": "Learn how to self-host Firecrawl to run on your own and contribute to the project.",
+    "tags": [
+      "contributing",
+      "self-hosting"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/camelai",
+    "title": "Camel AI | Firecrawl",
+    "description": "Firecrawl integrates with Camel AI as a data loader.",
+    "tags": [
+      "integrations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/security.md",
+    "tags": [
+      "webhooks",
+      "security"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/contributing/self-host.md",
+    "tags": [
+      "contributing",
+      "self-hosting"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/crawl-get",
+    "title": "Get Crawl Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/ai-platforms",
+    "title": "AI Platforms - Firecrawl Docs",
+    "description": "Power AI assistants and let customers build AI apps",
+    "tags": [
+      "use-cases",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/change-tracking",
+    "title": "Change tracking | Firecrawl",
+    "description": "Firecrawl can track changes between the current page and a previous version, and tell you if it updated or not",
+    "tags": [
+      "features",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/mcp",
+    "tags": [
+      "mcp",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/mcp-server.md",
+    "tags": [
+      "mcp",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-get-errors",
+    "title": "Get Crawl Errors - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/introduction.md",
+    "tags": [
+      "guides",
+      "getting-started"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/extract-get.md",
+    "tags": [
+      "api-reference",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/extract-get",
+    "title": "Get Extract Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v1-welcome",
+    "title": "Welcome to V1 | Firecrawl",
+    "description": "Firecrawl allows you to turn entire websites into LLM-ready markdown",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/rate-limits.md",
+    "tags": [
+      "guides",
+      "rate-limits"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape-get-errors.md",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/contributing/open-source-or-cloud.md",
+    "tags": [
+      "contributing",
+      "open-source"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/extract",
+    "title": "Extract - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/testing.md",
+    "tags": [
+      "webhooks",
+      "testing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/llamaindex",
+    "title": "Llamaindex | Firecrawl",
+    "description": "Firecrawl integrates with LlamaIndex as a document reader.",
+    "tags": [
+      "integrations",
+      "llamaindex"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/migrate-to-v2",
+    "title": "Migrating from v1 to v2 | Firecrawl",
+    "description": "Key changes, mappings, and before/after snippets to upgrade your integration to v2.",
+    "tags": [
+      "guides",
+      "migration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/advanced-scraping-guide",
+    "title": "Advanced Scraping Guide | Firecrawl",
+    "description": "Learn how to improve your Firecrawl scraping with advanced options.",
+    "tags": [
+      "guides",
+      "advanced"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/flowise",
+    "title": "Flowise | Firecrawl",
+    "description": "Learn how to use Firecrawl on Flowise",
+    "tags": [
+      "integrations",
+      "flowise"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/agents/fire-1",
+    "title": "FIRE-1 AI Agent (Beta) | Firecrawl",
+    "description": "AI agent that enables intelligent navigation and interaction with web pages",
+    "tags": [
+      "agents",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/developers-mcp",
+    "title": "Developers & MCP - Firecrawl Docs",
+    "description": "Build powerful integrations with Model Context Protocol support",
+    "tags": [
+      "use-cases",
+      "ai-integration",
+      "mcp"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/introduction.md",
+    "tags": [
+      "api-reference"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v0/sdks/node",
+    "title": "Node SDK | Firecrawl",
+    "description": "Firecrawl Node SDK is a wrapper around the Firecrawl API to help you easily turn websites into markdown.",
+    "tags": [
+      "sdks",
+      "node",
+      "typescript"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/extract",
+    "title": "Extract | Firecrawl",
+    "description": "Extract structured data from pages using LLMs",
+    "tags": [
+      "features",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/llm-extract",
+    "title": "JSON mode | Firecrawl",
+    "description": "Extract structured data from pages via LLMs",
+    "tags": [
+      "features",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/observability",
+    "title": "Observability & Monitoring - Firecrawl Docs",
+    "description": "Monitor websites, track uptime, and detect changes in real-time",
+    "tags": [
+      "use-cases",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/credit-usage",
+    "title": "Credit Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "title": "Batch Scrape | Firecrawl",
+    "description": "Batch scrape multiple URLs",
+    "tags": [
+      "features",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/crawl-get-errors",
+    "title": "Get Crawl Errors - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/sdks/node",
+    "title": "Node SDK | Firecrawl",
+    "description": "Firecrawl Node SDK is a wrapper around the Firecrawl API to help you easily turn websites into markdown.",
+    "tags": [
+      "sdks",
+      "node",
+      "typescript"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/product-ecommerce",
+    "title": "Product & E-commerce - Firecrawl Docs",
+    "description": "Monitor pricing and track inventory across e-commerce sites",
+    "tags": [
+      "use-cases",
+      "ecommerce"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/queue-status.md",
+    "tags": [
+      "api-reference",
+      "queue"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/batch-scrape-delete",
+    "title": "Cancel Batch Scrape - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-params-preview",
+    "title": "Crawl Params Preview - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/alpha/deep-research",
+    "title": "Deep Research | Firecrawl",
+    "description": "Research API that allows you to build deep research into your own applications\"",
+    "tags": [
+      "features",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-params-preview.md",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/investment-finance",
+    "title": "Investment & Finance - Firecrawl Docs",
+    "description": "Track companies and extract financial insights from web data",
+    "tags": [
+      "use-cases",
+      "finance"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/crawl",
+    "title": "Crawl | Firecrawl",
+    "description": "Firecrawl can recursively search through a urls subdomains, and gather the content",
+    "tags": [
+      "features",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/data-migration",
+    "title": "Data Migration - Firecrawl Docs",
+    "description": "Transfer web data efficiently between platforms and systems",
+    "tags": [
+      "use-cases",
+      "data-management"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/lead-enrichment",
+    "title": "Lead Enrichment - Firecrawl Docs",
+    "description": "Extract and filter leads from websites to power your sales pipeline",
+    "tags": [
+      "use-cases",
+      "sales"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/data-migration.md",
+    "tags": [
+      "use-cases",
+      "data-management"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-delete",
+    "title": "Cancel Crawl - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/sdks/node.md",
+    "tags": [
+      "sdks",
+      "node",
+      "typescript"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/content-generation",
+    "title": "Content Generation - Firecrawl Docs",
+    "description": "Generate AI content based on website data, images, and news",
+    "tags": [
+      "use-cases",
+      "content"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction.md",
+    "tags": [
+      "api-reference",
+      "v2"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape.md",
+    "tags": [
+      "api-reference",
+      "scraping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/search",
+    "title": "Search - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/ai-platforms.md",
+    "tags": [
+      "use-cases",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/overview",
+    "title": "Use Cases - Firecrawl Docs",
+    "description": "Transform web data into powerful features for your applications",
+    "tags": [
+      "use-cases"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/quickstart",
+    "title": "Quickstart | Firecrawl",
+    "description": "Start building awesome documentation in under 5 minutes",
+    "tags": [
+      "guides",
+      "getting-started"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/map",
+    "title": "Map | Firecrawl",
+    "description": "Input a website and get all the urls on the website - extremely fast",
+    "tags": [
+      "features",
+      "mapping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/map",
+    "title": "Map - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "mapping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/batch-scrape-get",
+    "title": "Get Batch Scrape Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-active.md",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/dify",
+    "title": "Dify | Firecrawl",
+    "description": "Learn how to use Firecrawl on Dify",
+    "tags": [
+      "integrations",
+      "dify"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/proxies",
+    "title": "Proxies | Firecrawl",
+    "description": "Learn about proxy types, locations, and how Firecrawl selects proxies for your requests.",
+    "tags": [
+      "features",
+      "proxies"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/scrape.md",
+    "tags": [
+      "features",
+      "scraping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape-delete.md",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "title": "Faster Scraping | Firecrawl",
+    "description": "Speed up your scrapes by 500% with the maxAge parameter",
+    "tags": [
+      "features",
+      "performance"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-delete.md",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "title": "Introduction - Firecrawl Docs",
+    "description": "Firecrawl API Reference",
+    "tags": [
+      "api-reference"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/credit-usage",
+    "title": "Credit Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+    "title": "Scrape - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/crawl-active",
+    "title": "Get Active Crawls - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/deep-research",
+    "title": "Deep Research - Firecrawl Docs",
+    "description": "Build agentic research tools with deep web search capabilities",
+    "tags": [
+      "use-cases",
+      "research"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape-get.md",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/token-usage",
+    "title": "Token Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/batch-scrape-get-errors",
+    "title": "Get Batch Scrape Errors - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-active",
+    "title": "Get Active Crawls - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/fast-scraping.md",
+    "tags": [
+      "features",
+      "performance"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/introduction",
+    "title": "Quickstart | Firecrawl",
+    "description": "Firecrawl allows you to turn entire websites into LLM-ready markdown",
+    "tags": [
+      "guides",
+      "getting-started"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape",
+    "title": "Batch Scrape - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/extract.md",
+    "tags": [
+      "api-reference",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/content-generation.md",
+    "tags": [
+      "use-cases",
+      "content"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/llm-extract.md",
+    "tags": [
+      "features",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/extract.md",
+    "tags": [
+      "features",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations",
+    "title": "Integrations | Firecrawl",
+    "description": "Firecrawl allows you to turn entire websites into LLM-ready markdown",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/credit-usage-historical",
+    "title": "Historical Credit Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape.md",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v1/api-reference/introduction",
+    "title": "Introduction - Firecrawl Docs",
+    "description": "Firecrawl API Reference",
+    "tags": [
+      "api-reference"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/deep-research.md",
+    "tags": [
+      "use-cases",
+      "research"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/crawl-post",
+    "title": "Crawl - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "crawling",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/migrate-to-v2.md",
+    "tags": [
+      "guides",
+      "migration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v0/features/extract",
+    "title": "Extract | Firecrawl",
+    "description": "Extract structured data from pages via LLMs",
+    "tags": [
+      "features",
+      "extraction"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/map.md",
+    "tags": [
+      "features",
+      "mapping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/seo-platforms.md",
+    "tags": [
+      "use-cases",
+      "seo"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "title": "Stealth Mode | Firecrawl",
+    "description": "Use stealth proxies for sites with advanced anti-bot solutions",
+    "tags": [
+      "features",
+      "stealth-mode"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/map",
+    "title": "Map - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "mapping",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/search.md",
+    "tags": [
+      "features",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape-get",
+    "title": "Get Batch Scrape Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/search",
+    "title": "Search - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "search",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/alpha/llmstxt",
+    "title": "LLMs.txt Generator | Firecrawl",
+    "description": "Generate LLMs.txt files from any website for LLM training and analysis",
+    "tags": [
+      "features"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/batch-scrape-delete",
+    "title": "Cancel Batch Scrape - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "batch-operations"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/crawl.md",
+    "tags": [
+      "features",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/use-cases/competitive-intelligence.md",
+    "tags": [
+      "use-cases",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/agents/fire-1.md",
+    "tags": [
+      "agents",
+      "ai-integration"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/sdks/overview",
+    "title": "SDKs | Firecrawl",
+    "description": "Firecrawl SDKs are wrappers around the Firecrawl API to help you easily extract data from websites.",
+    "tags": [
+      "sdks",
+      "overview"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/rate-limits",
+    "title": "Rate Limits | Firecrawl",
+    "description": "Rate limits for different pricing plans and API requests",
+    "tags": [
+      "guides",
+      "rate-limits"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/sitemap.xml",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/token-usage-historical",
+    "title": "Historical Token Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/learn/data-extraction-using-llms",
+    "title": "Extract website data using LLMs | Firecrawl",
+    "description": "Learn how to use Firecrawl and Groq to extract structured data from a web page in a few lines of code.",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/queue-status",
+    "title": "Queue Status - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "queue",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/search",
+    "title": "Search | Firecrawl",
+    "description": "Search the web and get full content from results",
+    "tags": [
+      "features",
+      "search"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/v0/introduction",
+    "title": "Quickstart | Firecrawl",
+    "description": "Firecrawl allows you to turn entire websites into LLM-ready markdown",
+    "tags": []
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/credit-usage-historical.md",
+    "tags": [
+      "api-reference",
+      "billing"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/overview.md",
+    "tags": [
+      "webhooks"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/integrations/langflow",
+    "title": "Langflow | Firecrawl",
+    "description": "Learn how to use Firecrawl on Langflow",
+    "tags": [
+      "integrations",
+      "langflow"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-post.md",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/events.md",
+    "tags": [
+      "webhooks",
+      "events"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/change-tracking.md",
+    "tags": [
+      "features",
+      "monitoring"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/scrape",
+    "title": "Scrape - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "scraping",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/v1-endpoint/token-usage-historical",
+    "title": "Historical Token Usage - Firecrawl Docs",
+    "tags": [
+      "api-reference",
+      "billing",
+      "v1"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/webhooks/events",
+    "title": "Webhook Event Types | Firecrawl",
+    "description": "Complete reference of all webhook events and when they trigger",
+    "tags": [
+      "webhooks",
+      "events"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/features/scrape",
+    "title": "Scrape | Firecrawl",
+    "description": "Turn any url into clean data",
+    "tags": [
+      "features",
+      "scraping"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-get.md",
+    "tags": [
+      "api-reference",
+      "crawling"
+    ]
+  },
+  {
+    "url": "https://docs.firecrawl.dev/learn/rag-llama3",
+    "title": "Build a 'Chat with website' using Groq Llama 3 | Firecrawl",
+    "description": "Learn how to use Firecrawl, Groq Llama 3, and Langchain to build a 'Chat with your website' bot.",
+    "tags": []
+  }
+]

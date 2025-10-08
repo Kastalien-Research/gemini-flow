@@ -115,3 +115,12 @@ SWARM_COMPLETION_REPORT.md
 test-*.sh
 coordination/
 *.md.bak
+
+# Build output
+dist/
+*.js.map
+*.d.ts.map
+
+# Temporary MCPJam test directories
+.mcpjam-*
+

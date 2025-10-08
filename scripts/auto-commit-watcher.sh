@@ -14,11 +14,28 @@ if ! command -v fswatch &> /dev/null; then
     brew install fswatch
 fi
 
-# Function to commit changes
+# Function to commit changes with validation
 auto_commit() {
     local changed_file="$1"
+
+    # Stage changes
     git add -A
-    git commit -m "Auto-commit: $(date '+%Y-%m-%d %H:%M:%S') - ${changed_file}" --no-verify
+
+    # If .slash/ files changed, validate BEFORE committing
+    if echo "$changed_file" | grep -q "^\.slash/"; then
+        echo "🔍 Validating slash command: $changed_file"
+
+        if ! python3 tools/slashc.py validate .slash/*.md; then
+            echo "❌ Validation failed - commit blocked"
+            git reset HEAD  # Unstage
+            return 1
+        fi
+
+        echo "✅ Validation passed"
+    fi
+
+    # Commit with hooks enabled (removed --no-verify)
+    git commit -m "Auto-commit: $(date '+%Y-%m-%d %H:%M:%S') - ${changed_file}"
 }
 
 # Watch for any file changes and auto-commit

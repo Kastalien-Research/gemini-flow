@@ -1,0 +1,25 @@
+{
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "runOnSave.commands": [
+    {
+      "match": "\\.slash/.*\\.md$",
+      "command": "python3 ${workspaceFolder}/tools/slashc.py validate ${file}",
+      "runIn": "terminal",
+      "runningStatusMessage": "Validating slash command...",
+      "finishStatusMessage": "Validation complete"
+    }
+  ]
+}

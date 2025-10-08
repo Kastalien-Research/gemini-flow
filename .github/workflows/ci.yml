@@ -1,309 +1,77 @@
-name: CI Pipeline
-
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main, develop]
-
+name: CI
+on: [pull_request, push]
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash -euxo pipefail
 env:
-  NODE_VERSION: '20'
-  CACHE_VERSION: 'v2'
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  TZ: Europe/Zurich
+  PYTHONHASHSEED: "0"
 
 jobs:
-  # Quick validation job for fast feedback
-  quick-check:
-    name: Quick Check
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Python for slashc
+        uses: actions/setup-python@v5
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          python-version: '3.x'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install Python dependencies
+        run: pip install PyYAML jsonschema
 
-      - name: Type checking
+      - name: Validate slash command structure
         run: |
-          echo "Running comprehensive TypeScript checks..."
-          
-          # Main TypeScript check
-          npm run typecheck || echo "⚠️ Main typecheck had issues"
-          
-          # CLI-specific TypeScript check
-          if [ -f "tsconfig.cli.json" ]; then
-            echo "Checking CLI TypeScript configuration..."
-            npx tsc --project tsconfig.cli.json --noEmit || echo "⚠️ CLI typecheck had issues"
-          fi
-          
-          # Check for TypeScript errors in specific directories
-          if [ -d "src/cli" ]; then
-            echo "Checking CLI source files..."
-            npx tsc --noEmit src/cli/*.ts src/cli/**/*.ts 2>/dev/null || echo "⚠️ CLI source files have TS issues"
-          fi
+          mkdir -p .slash
+          ./tools/slashc.py validate .slash/*.md
 
-      - name: Lint code
-        run: npm run lint
+      - name: Intelligent validation with Claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Review .slash/build.md and .slash/test.md. These are production CI/CD commands.
 
-      - name: Static Analysis for Build Issues
-        run: |
-          echo "Running static analysis for common build issues..."
-          
-          # Check for shebang issues in source files
-          echo "Checking for shebang issues in source files..."
-          if find src -name "*.ts" -o -name "*.js" 2>/dev/null | xargs grep -l "^#!" 2>/dev/null | head -3; then
-            echo "⚠️ Found shebangs in TypeScript/JS source files (may cause issues)"
-          fi
-          
-          # Check for dependency usage patterns
-          echo "Checking dependency patterns..."
-          if find src -name "*.ts" -o -name "*.js" 2>/dev/null | xargs grep -l "require.*commander\|import.*commander" 2>/dev/null | head -3; then
-            echo "ℹ️ Found commander usage (ensure it's in dependencies)"
-          fi
-          
-          if find src -name "*.ts" -o -name "*.js" 2>/dev/null | xargs grep -l "require.*chalk\|import.*chalk" 2>/dev/null | head -3; then
-            echo "ℹ️ Found chalk usage (ensure it's in dependencies)"
-          fi
-          
-          echo "✅ Static analysis completed"
+            Reject if ANY of these are true:
+            1. Contains placeholder echo statements instead of real npm commands
+            2. Container images are not pinned with SHA256 digests
+            3. Does not use actual project build/test commands from package.json
 
+            Respond with: VALID or INVALID with explanation.
+  build:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python for slashc
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install Python dependencies
+        run: pip install PyYAML jsonschema
+      - name: Run /build
+        run: ./tools/slashc.py run .slash/build.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: .out/build
   test:
-    name: Test Suite
-    runs-on: ${{ matrix.os }}
-    needs: quick-check
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [18, 20, 22]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    
-    env:
-      NODE_OPTIONS: '--experimental-vm-modules'
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Cache node modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ env.CACHE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ matrix.node-version }}-${{ env.CACHE_VERSION }}-
-            ${{ runner.os }}-node-${{ matrix.node-version }}-
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Type checking
-        run: npm run typecheck
-
-      - name: Lint code
-        run: npm run lint
-
-      - name: Build project
-        run: npm run build
-
-      - name: Test CLI binary
-        if: matrix.os == 'ubuntu-latest' && matrix.node-version == 20
-        run: |
-          echo "Testing CLI binary installation and functionality..."
-          
-          # Create package and install globally
-          npm pack
-          PACKAGE_FILE=$(ls *.tgz | head -1)
-          echo "Created package: $PACKAGE_FILE"
-          
-          npm install -g "$PACKAGE_FILE"
-          
-          # Test basic CLI commands with better error handling
-          echo "Testing gemini-flow --help..."
-          gemini-flow --help >/dev/null || echo "⚠️ CLI help command failed"
-          
-          echo "Testing gemini-flow --version..."
-          gemini-flow --version || echo "⚠️ CLI version command failed"
-          
-          echo "Testing additional CLI commands..."
-          gemini-flow list-models >/dev/null 2>&1 || echo "⚠️ CLI list-models failed (may be normal without API key)"
-          
-          gemini-flow auth --status >/dev/null 2>&1 || echo "⚠️ CLI auth status failed (may be normal without setup)"
-          
-          gemini-flow doctor >/dev/null 2>&1 || echo "⚠️ CLI doctor failed (may be normal)"
-          
-          echo "✅ CLI testing completed"
-          
-          # Cleanup
-          npm uninstall -g "@clduab11/gemini-flow" || echo "⚠️ Failed to uninstall global package"
-          rm -f *.tgz
-
-  build-artifacts:
-    name: Build Artifacts
+    needs: build
     runs-on: ubuntu-latest
-    needs: test
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - name: Setup Python for slashc
+        uses: actions/setup-python@v5
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Create package
-        run: npm pack
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+          python-version: '3.x'
+      - name: Install Python dependencies
+        run: pip install PyYAML jsonschema
+      - name: Run /test
+        run: ./tools/slashc.py run .slash/test.md
+      - uses: actions/upload-artifact@v4
         with:
-          name: npm-package
-          path: '*.tgz'
-          retention-days: 30
-
-      - name: Upload dist directory
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist-files
-          path: dist/
-          retention-days: 7
-
-  security-audit:
-    name: Security Audit
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run npm audit
-        run: npm audit --audit-level=moderate
-
-      - name: Check for vulnerable dependencies
-        run: |
-          if npm audit --audit-level=high --json | jq '.vulnerabilities | length > 0'; then
-            echo "High severity vulnerabilities found!"
-            npm audit --audit-level=high
-            exit 1
-          fi
-
-  validate-package:
-    name: Validate Package
-    runs-on: ubuntu-latest
-    needs: build-artifacts
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: npm-package
-
-      - name: Test package installation
-        run: |
-          # Create temp directory for testing
-          mkdir -p /tmp/package-test
-          cd /tmp/package-test
-          
-          # Initialize a test project
-          npm init -y
-          
-          # Install the package from tarball
-          npm install $GITHUB_WORKSPACE/*.tgz
-          
-          # Test CLI commands
-          npx gemini-flow --help
-          npx quantum-flow --version
-
-      - name: Validate package.json
-        run: |
-          # Check required fields
-          node -e "
-            const pkg = require('./package.json');
-            const required = ['name', 'version', 'description', 'main', 'bin', 'files'];
-            required.forEach(field => {
-              if (!pkg[field]) throw new Error(\`Missing required field: \${field}\`);
-            });
-            console.log('Package.json validation passed');
-          "
-
-  performance-test:
-    name: Performance Tests
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Run performance benchmarks
-        run: |
-          if [ -f "scripts/benchmark.ts" ]; then
-            npm run benchmark
-          else
-            echo "No benchmark script found, skipping performance tests"
-          fi
-
-      - name: Comment PR with performance results
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            // This would add performance results as a comment on the PR
-            // Implementation depends on benchmark output format
-            console.log('Performance test completed');
+          name: coverage
+          path: .out/coverage

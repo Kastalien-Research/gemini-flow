@@ -1,0 +1,36 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔒 Running pre-commit validation..."
+
+# Get staged files
+STAGED_FILES=$(git diff --cached --name-only)
+
+if [ -z "$STAGED_FILES" ]; then
+    echo "✅ No files staged"
+    exit 0
+fi
+
+# Security validation (secrets, forbidden files, gitignore violations)
+if ! npx tsx .claude/hooks/validate-commit-security.ts; then
+  echo "❌ Security validation failed"
+  exit 1
+fi
+
+# Validate slash commands if modified
+if echo "$STAGED_FILES" | grep -q "^\.slash/"; then
+  echo ""
+  echo "🔍 Validating slash commands..."
+  if ! npx tsx .claude/hooks/validate-slash-local.ts .slash/*.md; then
+    echo "❌ Slash command validation failed"
+    exit 1
+  fi
+fi
+
+# Run lint-staged for code quality
+echo ""
+npx lint-staged
+
+echo ""
+echo "✅ All validations passed"
+exit 0

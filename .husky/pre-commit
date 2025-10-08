@@ -1,1 +1,24 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run lint-staged first
 npx lint-staged
+
+# Validate slash commands if they were modified
+if git diff --cached --name-only | grep -q "^\.slash/"; then
+  echo "🔍 Validating slash commands..."
+
+  # Structural validation
+  if ! python3 tools/slashc.py validate .slash/*.md; then
+    echo "❌ Structural validation failed"
+    exit 1
+  fi
+
+  # Intelligent semantic validation
+  if ! npx tsx .claude/hooks/validate-slash-local.ts .slash/*.md; then
+    echo "❌ Semantic validation failed - fix violations before committing"
+    exit 1
+  fi
+
+  echo "✅ Slash command validation passed"
+fi

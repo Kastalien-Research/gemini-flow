@@ -1,0 +1,12 @@
+# CODEOWNERS - Protect critical CI/CD infrastructure from unauthorized changes
+
+# CI/CD infrastructure requires approval
+/.github/workflows/ @your-username
+/tools/ @your-username
+/.slash/ @your-username
+/tools/slashc.py @your-username
+/tools/schemas/ @your-username
+
+# Security and configuration
+/.claude/ @your-username
+/CLAUDE.md @your-username
