@@ -1,5 +1,6 @@
 import { MCPSettingsManager } from './mcp-settings-manager.js';
-import { MCPSettings, ToolCapability } from '../../types/mcp-config.js';
+import { MCPSettings } from '../types/mcp-config.js';
+import type { Tool } from '@modelcontextprotocol/sdk/types.js';
 
 /**
  * @interface RegisteredMCPServer
@@ -9,7 +10,7 @@ export interface RegisteredMCPServer {
   name: string;
   command: string;
   args: string[];
-  capabilities: ToolCapability[];
+  capabilities: Tool[];
   status: 'installed' | 'not_installed' | 'running' | 'stopped' | 'error';
   disabled: boolean;
   // Add more properties like version, description, etc.
@@ -37,7 +38,7 @@ export class MCPServerRegistry {
       const serverConfig = settings.mcpServers[serverName];
       // For now, capabilities are hardcoded or assumed. In a real scenario, this would involve
       // communicating with the MCP server to discover its capabilities.
-      const capabilities: ToolCapability[] = []; // Placeholder
+      const capabilities: Tool[] = []; // Placeholder
       this.registeredServers.set(serverName, {
         name: serverName,
         command: serverConfig.command,
@@ -145,7 +146,7 @@ export class MCPServerRegistry {
   }
 
   // Placeholder for capability discovery - this would involve communicating with the MCP server
-  private async discoverCapabilities(serverName: string): Promise<ToolCapability[]> {
+  private async discoverCapabilities(serverName: string): Promise<Tool[]> {
     // In a real implementation, this would involve sending a command to the MCP server
     // to query its capabilities. For now, return an empty array.
     return [];

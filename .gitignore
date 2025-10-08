@@ -24,6 +24,12 @@
 # Specification and planning docs
 specs/
 
+# Claude and AI assistant directories
+.claude/
+.claude-flow/
+claude-flow
+CLAUDE.md
+
 # CI/CD and Quality Assurance artifacts
 reports/
 coverage/

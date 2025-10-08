@@ -1,0 +1,5 @@
+{
+  "anthropic": "test-anthropic-key",
+  "openai": "test-openai-key",
+  "gemini": "test-gemini-key"
+}

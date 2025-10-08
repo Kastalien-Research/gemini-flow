@@ -1,0 +1,150 @@
+[
+  {
+    "title": "Basic file listing",
+    "query": "List all files in the current directory",
+    "runs": 1,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["list_directory"],
+    "temperature": 0
+  },
+  {
+    "title": "File search by content",
+    "query": "Find all TypeScript files containing the word 'MCPJam'",
+    "runs": 3,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["search_files"],
+    "temperature": 0
+  },
+  {
+    "title": "Multi-step file analysis",
+    "query": "Find all configuration files (*.json) in the project and show me the contents of package.json",
+    "runs": 2,
+    "model": "gpt-4-turbo",
+    "provider": "openai",
+    "expectedToolCalls": ["search_files", "read_file"],
+    "temperature": 0
+  },
+  {
+    "title": "Code analysis and explanation",
+    "query": "Read the src/core/mcpjam-config-manager.ts file and explain how encryption works",
+    "runs": 1,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["read_file"],
+    "temperature": 0.3,
+    "maxTokens": 4096
+  },
+  {
+    "title": "Sequential reasoning task",
+    "query": "What are the best practices for implementing secure API key storage in a Node.js application? Think through this step by step.",
+    "runs": 1,
+    "model": "gpt-4-turbo",
+    "provider": "openai",
+    "expectedToolCalls": ["sequentialthinking"],
+    "temperature": 0.7
+  },
+  {
+    "title": "Complex codebase analysis",
+    "query": "Analyze the architecture of the src/core/ directory and identify the main components and their relationships",
+    "runs": 1,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["list_directory", "read_file"],
+    "temperature": 0.5,
+    "maxTokens": 8192
+  },
+  {
+    "title": "GitHub repository search",
+    "query": "Search for recent issues in the repository that mention 'MCP' or 'MCPJam'",
+    "runs": 1,
+    "model": "gpt-4-turbo",
+    "provider": "openai",
+    "expectedToolCalls": ["search_issues"],
+    "temperature": 0
+  },
+  {
+    "title": "Database query task",
+    "query": "Show me the schema of the users table in the database",
+    "runs": 1,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["query"],
+    "temperature": 0
+  },
+  {
+    "title": "Web search for documentation",
+    "query": "Find the latest information about the Model Context Protocol (MCP) specification",
+    "runs": 1,
+    "model": "gemini-2.0-flash-exp",
+    "provider": "gemini",
+    "expectedToolCalls": ["brave_web_search"],
+    "temperature": 0.3
+  },
+  {
+    "title": "Consistency test: File reading",
+    "query": "Read the README.md file and summarize the project",
+    "runs": 5,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["read_file"],
+    "temperature": 0
+  },
+  {
+    "title": "Cross-provider comparison: Code search (Claude)",
+    "query": "Find all files that export a class",
+    "runs": 3,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["search_files"],
+    "temperature": 0
+  },
+  {
+    "title": "Cross-provider comparison: Code search (GPT-4)",
+    "query": "Find all files that export a class",
+    "runs": 3,
+    "model": "gpt-4-turbo",
+    "provider": "openai",
+    "expectedToolCalls": ["search_files"],
+    "temperature": 0
+  },
+  {
+    "title": "Cross-provider comparison: Code search (Gemini)",
+    "query": "Find all files that export a class",
+    "runs": 3,
+    "model": "gemini-2.0-flash-exp",
+    "provider": "gemini",
+    "expectedToolCalls": ["search_files"],
+    "temperature": 0
+  },
+  {
+    "title": "Performance test: Fast model",
+    "query": "List all TypeScript files in src/",
+    "runs": 10,
+    "model": "gemini-2.0-flash-exp",
+    "provider": "gemini",
+    "expectedToolCalls": ["list_directory"],
+    "temperature": 0
+  },
+  {
+    "title": "Complex multi-step workflow",
+    "query": "Find all test files that import 'MCPJamTestOrchestrator', read the first one, check if it has proper cleanup in afterAll hooks, and suggest improvements if needed",
+    "runs": 1,
+    "model": "claude-3-5-sonnet-latest",
+    "provider": "anthropic",
+    "expectedToolCalls": ["search_files", "read_file"],
+    "temperature": 0.5,
+    "maxTokens": 8192
+  },
+  {
+    "title": "General response quality (no expected tools)",
+    "query": "Explain the benefits of using MCP for AI applications",
+    "runs": 1,
+    "model": "gpt-4-turbo",
+    "provider": "openai",
+    "expectedToolCalls": [],
+    "temperature": 0.7,
+    "maxTokens": 2048
+  }
+]

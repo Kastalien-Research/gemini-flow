@@ -1,6 +1,6 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { ToolCapability } from '../../types/mcp-config.js';
+import { Tool } from '../../types/mcp-config.js';
 import { Logger } from '../../utils/logger.js';
 
 // Define the base directory for tool categories
@@ -14,7 +14,7 @@ export interface DiscoveredTool {
   name: string;
   category: string;
   filePath: string;
-  capabilities: ToolCapability[];
+  capabilities: Tool[];
   instance?: any; // The instantiated tool class
 }
 
@@ -62,7 +62,7 @@ export class ToolDiscoveryEngine {
                 const ToolClass = module[`${toolName.charAt(0).toUpperCase() + toolName.slice(1)}Tool`];
 
                 if (ToolClass && typeof ToolClass.getCapabilities === 'function') {
-                  const capabilities: ToolCapability[] = ToolClass.getCapabilities();
+                  const capabilities: Tool[] = ToolClass.getCapabilities();
                   const discoveredTool: DiscoveredTool = {
                     name: toolName,
                     category: categoryName,

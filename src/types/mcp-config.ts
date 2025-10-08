@@ -17,16 +17,6 @@ export interface MCPSettings {
 }
 
 /**
- * @interface ToolCapability
- * @description Defines the structure for a tool's capability.
- */
-export interface ToolCapability {
-  name: string;
-  description: string;
-  // Add more properties as needed for capability definition
-}
-
-/**
  * @interface SystemSettings
  * @description Defines the structure for overall system settings and preferences.
  */
@@ -37,3 +27,4 @@ export interface SystemSettings {
   sessionTimeout: number;
   // Add more system-wide settings
 }
+

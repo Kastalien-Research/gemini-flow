@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Test 1",
+    "query": "Test query 1",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "anthropic",
+    "runs": 1,
+    "expectedToolCalls": [],
+    "temperature": 0,
+    "maxTokens": 4096
+  },
+  {
+    "title": "Test 2",
+    "query": "Test query 2",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "anthropic",
+    "runs": 1,
+    "expectedToolCalls": [],
+    "temperature": 0,
+    "maxTokens": 4096
+  }
+]

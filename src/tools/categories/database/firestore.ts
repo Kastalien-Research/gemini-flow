@@ -1,4 +1,4 @@
-import { ToolCapability } from '../../../types/mcp-config.js';
+import { Tool } from '../../../types/mcp-config.js';
 
 /**
  * @interface FirestoreConfig
@@ -116,9 +116,9 @@ export class FirestoreTool implements FirestoreOperations {
 
   /**
    * Returns the capabilities provided by this tool.
-   * @returns {ToolCapability[]} An array of tool capabilities.
+   * @returns {Tool[]} An array of tool capabilities.
    */
-  public static getCapabilities(): ToolCapability[] {
+  public static getCapabilities(): Tool[] {
     return [
       { name: 'firestore_add_document', description: 'Adds a document to a Google Cloud Firestore collection.' },
       { name: 'firestore_get_document', description: 'Retrieves a document from a Google Cloud Firestore collection.' },

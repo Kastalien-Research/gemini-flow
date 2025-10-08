@@ -1,0 +1,61 @@
+[
+    {
+      "url": "https://docs.mcpjam.com/evals/installation",
+      "title": "Quick start - MCPJam Inspector",
+      "description": "To set up, create a new folder directory. In that directory, we'll create a test file and an server connection file. ​. Test ..."
+    },
+    {
+      "url": "https://docs.mcpjam.com/evals/overview"
+    },
+    {
+      "url": "https://docs.mcpjam.com/getting-started",
+      "title": "Quickstart - MCPJam Inspector",
+      "description": "Go to the “Tools” tab. You'll be able to see all of the MCP tools server-everything has. Tools tab lets you test individual tools with configured params."
+    },
+    {
+      "url": "https://docs.mcpjam.com/index"
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/connecting-servers"
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/contributing-guide"
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/debugging",
+      "title": "Tracing & debugging - MCPJam Inspector",
+      "description": "MCPJam Inspector provides powerful debugging and monitoring capabilities to help you identify and resolve issues in your MCP server implementation quickly and ..."
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/dev-setup"
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/guided-oauth"
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/llm-playground",
+      "title": "LLM Playground - MCPJam Inspector",
+      "description": "Use the LLM playground to test your server against different LLMs. This is helpful to simulate how LLMs interpret your server and test for hallucinations."
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/mcp-evals"
+    },
+    {
+      "url": "https://docs.mcpjam.com/inspector/tools-prompts-resources"
+    },
+    {
+      "url": "https://docs.mcpjam.com/installation",
+      "title": "Installation - MCPJam Inspector",
+      "description": "This will open the MCPJam inspector and connect to a STDIO using the commands you provided. Python Server; Node.js Server."
+    },
+    {
+      "url": "https://docs.mcpjam.com",
+      "title": "MCPJam Inspector: Overview",
+      "description": "Check your MCP server's behavior against different LLM's in the LLM playground. Simulate how your server would behave in environments like Claude, ChatGPT, ..."
+    },
+    {
+      "url": "https://docs.mcpjam.com/apps/notion",
+      "title": "Notion - MCPJam",
+      "description": "CTRL K. GitHub (opens in a new tab) Discord (opens in a new tab). CTRL K. Introduction · Getting Started · Our architecture."
+    }
+  ]

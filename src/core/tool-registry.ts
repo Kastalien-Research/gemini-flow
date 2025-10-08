@@ -1,4 +1,4 @@
-import { ToolCapability } from '../../types/mcp-config.js';
+import { Tool } from '../../types/mcp-config.js';
 import { SQLiteMemoryCore } from './sqlite-memory-core.js';
 import { Logger } from '../../utils/logger.js';
 
@@ -9,7 +9,7 @@ import { Logger } from '../../utils/logger.js';
 export interface RegisteredToolMetadata {
   name: string;
   category: string;
-  capabilities: ToolCapability[];
+  capabilities: Tool[];
   version: string;
   description: string;
   accessControl: 'public' | 'private' | 'restricted';

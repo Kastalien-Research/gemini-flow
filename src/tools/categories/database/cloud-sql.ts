@@ -1,4 +1,4 @@
-import { ToolCapability } from '../../../types/mcp-config.js';
+import { Tool } from '../../../types/mcp-config.js';
 
 /**
  * @interface CloudSQLConfig
@@ -111,9 +111,9 @@ export class CloudSQLTool implements CloudSQLOperations {
 
   /**
    * Returns the capabilities provided by this tool.
-   * @returns {ToolCapability[]} An array of tool capabilities.
+   * @returns {Tool[]} An array of tool capabilities.
    */
-  public static getCapabilities(): ToolCapability[] {
+  public static getCapabilities(): Tool[] {
     return [
       { name: 'cloud_sql_execute_query', description: 'Executes a SQL query on Google Cloud SQL.' },
       { name: 'cloud_sql_manage_instance', description: `Manages Google Cloud SQL instance (start, stop, restart, resize).

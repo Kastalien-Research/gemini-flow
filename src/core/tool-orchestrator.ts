@@ -1,5 +1,5 @@
 import { MCPServerRegistry, RegisteredMCPServer } from './mcp-server-registry.js';
-import { ToolCapability } from '../../types/mcp-config.js';
+import { Tool } from '../../types/mcp-config.js';
 
 /**
  * @interface ToolDefinition
@@ -8,7 +8,7 @@ import { ToolCapability } from '../../types/mcp-config.js';
 export interface ToolDefinition {
   name: string;
   serverName: string;
-  capability: ToolCapability;
+  capability: Tool;
   // Add more properties like schema, usage, etc.
 }
 
